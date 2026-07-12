@@ -116,10 +116,11 @@
         x-dc main { width: 100% !important; min-width: 0 !important; padding: 16px 12px 48px !important; }
         x-dc main * { max-width: 100%; }
         x-dc main [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+        x-dc main article { min-width: 0 !important; width: auto !important; }
         x-dc main [style*="display:flex"] { flex-wrap: wrap; }
         x-dc main [style*="min-width"] { min-width: 0 !important; }
         x-dc main table { min-width: 720px; }
-        x-dc main [style*="overflow-x:auto"] { max-width: 100%; }
+        x-dc main [style*="overflow-x:auto"] { width: 100% !important; max-width: 100%; }
         x-dc main section[data-jump] { scroll-margin-top: 64px; }
       }
     `;
