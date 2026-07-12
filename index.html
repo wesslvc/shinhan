@@ -26,20 +26,21 @@
       <aside class="sidebar">
         <nav>
           <p>인재 성장</p>
-          <a href="#" class="active"><i>◈</i><span>전문역량 메타인지</span></a>
-          <a href="#"><i>◎</i><span>역량 Level 조회</span></a>
-          <a href="#"><i>◇</i><span>직무 정의서</span></a>
+          <a href="#meta" class="active" data-page="meta"><i>◈</i><span>전문역량 메타인지</span></a>
+          <a href="#levels" data-page="levels"><i>◎</i><span>역량 Level 조회</span></a>
+          <a href="#jobs" data-page="jobs"><i>◇</i><span>직무 정의서</span></a>
           <p>평가 관리</p>
-          <a href="#"><i>□</i><span>다면역량진단</span></a>
-          <a href="#"><i>△</i><span>기술역량평가</span></a>
-          <a href="#"><i>▤</i><span>평가 결과</span></a>
+          <a href="#multi" data-page="multi"><i>□</i><span>다면역량진단</span><em>진행중</em></a>
+          <a href="#tech" data-page="tech"><i>△</i><span>기술역량평가</span></a>
+          <a href="#results" data-page="results"><i>▤</i><span>평가 결과</span></a>
           <p>성장 지원</p>
-          <a href="#"><i>☆</i><span>추천 교육·자격</span></a>
+          <a href="#learning" data-page="learning"><i>☆</i><span>추천 교육·자격</span><em>3</em></a>
         </nav>
         <div class="side-help"><span>i</span><div><b>데이터 기준</b><small>2026년 6월 말 배치</small></div></div>
       </aside>
 
       <main>
+        <section id="metaPage" class="app-page active">
         <div class="breadcrumb">e-HR <span>›</span> 인재성장 <span>›</span> 메타인지</div>
         <section class="page-heading">
           <div><p class="eyebrow">MY GROWTH INSIGHT</p><h1>전문역량 메타인지</h1><p>현재 수준을 이해하고 다음 성장을 위한 근거와 행동을 확인합니다.</p></div>
@@ -79,9 +80,12 @@
           <div class="org-grid"><article class="surface"><div class="section-head"><div><p class="eyebrow">직전 회차 대비</p><h2>구성원 역량 분포</h2></div><span class="soft-badge">2026-06 기준</span></div><div id="memberBars" class="member-bars"></div><div class="bar-legend"><span><i></i>현재 점수</span><span><b></b>직전 회차</span></div></article><article class="surface"><div class="section-head"><div><p class="eyebrow">예측 및 판단</p><h2>관심 직원</h2></div><span id="watchCount" class="risk-badge"></span></div><div id="watchList" class="watch-list"></div></article></div>
           <article class="surface table-card"><div class="section-head"><div><p class="eyebrow">상세 현황</p><h2>구성원별 평가 결과</h2></div><button id="downloadCsv" class="secondary-button">CSV 다운로드</button></div><div class="table-scroll"><table><thead><tr><th>관심</th><th>성명</th><th>조직</th><th>직무</th><th>직급</th><th>역량 Level</th><th>점수</th><th>다면진단</th><th>자격증</th><th>상태</th></tr></thead><tbody id="memberTable"></tbody></table><p id="emptyState" class="empty-state">조건에 맞는 직원이 없습니다.</p></div></article>
         </section>
+        </section>
+        <section id="featurePage" class="app-page" aria-live="polite"></section>
       </main>
     </div>
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="modal" class="modal" aria-hidden="true"><div class="modal-backdrop" data-close-modal></div><section class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><header><div><p class="eyebrow" id="modalEyebrow">DETAIL</p><h2 id="modalTitle">상세 정보</h2></div><button type="button" class="modal-close" data-close-modal aria-label="닫기">×</button></header><div id="modalBody" class="modal-body"></div></section></div>
     <script src="app.js"></script>
   </body>
 </html>
