@@ -98,7 +98,7 @@
         <sc-if value="{{ isViewMy }}" hint-placeholder-val="{{ true }}">
           <article style="display:flex;align-items:center;padding:16px 18px;gap:14px;margin-bottom:14px;background:#fff;border:1px solid #d9dee6;border-radius:6px;">
             <div style="width:44px;height:44px;flex:0 0 auto;border-radius:6px;background:#eef2f8;color:#0a3d80;font-size:16px;font-weight:800;display:grid;place-items:center;">샘</div>
-            <div style="flex:0 0 160px;display:flex;flex-direction:column;"><strong style="font-size:14px;">샘플 사용자</strong><span style="font-size:10px;color:#5c6572;">프로(수석) · 디지털혁신팀</span></div>
+            <div style="flex:0 0 160px;display:flex;flex-direction:column;"><strong style="font-size:14px;">샘플 사용자</strong><span style="font-size:10px;color:#5c6572;">프로(수석) · 품질혁신팀</span></div>
             <dl style="display:grid;grid-template-columns:repeat(3,minmax(120px,1fr));margin:0;gap:8px 22px;flex:1;border-left:1px solid #d9dee6;padding-left:20px;">
               <div style="display:flex;gap:8px;align-items:baseline;"><dt style="color:#8b93a1;font-size:9.5px;min-width:56px;margin:0;">사번</dt><dd style="margin:0;font-size:11px;font-weight:600;">SAMPLE-001</dd></div>
               <div style="display:flex;gap:8px;align-items:baseline;"><dt style="color:#8b93a1;font-size:9.5px;min-width:56px;margin:0;">직급</dt><dd style="margin:0;font-size:11px;font-weight:600;">S2</dd></div>
@@ -545,9 +545,9 @@
         <div style="display:grid;grid-template-columns:1fr 1.25fr;gap:14px;margin-bottom:14px;">
           <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:20px;">
             <div style="display:flex;justify-content:space-between;gap:12px;margin-bottom:14px;"><div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">WEIGHT SIMULATION</p><h2 style="font-size:15.5px;margin:3px 0 0;font-weight:700;">평가 가중치</h2></div><span style="{{ weightTotalStyle }}">{{ weightTotalText }}</span></div>
-            <label style="display:block;margin:15px 0;"><span style="display:flex;justify-content:space-between;font-size:9px;color:#5c6572;">다면역량진단<b style="color:#14508c;">{{ weightLabels.multi }}</b></span><input onInput="{{ handlers.setWeightMulti }}" value="{{ state.weights.multi }}" type="range" min="0" max="100" style="width:100%;accent-color:#14508c;"></label>
-            <label style="display:block;margin:15px 0;"><span style="display:flex;justify-content:space-between;font-size:9px;color:#5c6572;">MBO 성과평가<b style="color:#14508c;">{{ weightLabels.tech }}</b></span><input onInput="{{ handlers.setWeightTech }}" value="{{ state.weights.tech }}" type="range" min="0" max="100" style="width:100%;accent-color:#14508c;"></label>
-            <label style="display:block;margin:15px 0;"><span style="display:flex;justify-content:space-between;font-size:9px;color:#5c6572;">산업역량진단<b style="color:#14508c;">{{ weightLabels.industry }}</b></span><input onInput="{{ handlers.setWeightIndustry }}" value="{{ state.weights.industry }}" type="range" min="0" max="100" style="width:100%;accent-color:#14508c;"></label>
+            <label style="display:block;margin:15px 0;"><span style="display:flex;justify-content:space-between;font-size:9px;color:#5c6572;">다면역량진단<b style="color:#14508c;">{{ weightLabels.multi }}</b></span><input onChange="{{ handlers.setWeightMulti }}" value="{{ state.weights.multi }}" type="range" min="0" max="100" style="width:100%;accent-color:#14508c;"></label>
+            <label style="display:block;margin:15px 0;"><span style="display:flex;justify-content:space-between;font-size:9px;color:#5c6572;">MBO 성과평가<b style="color:#14508c;">{{ weightLabels.tech }}</b></span><input onChange="{{ handlers.setWeightTech }}" value="{{ state.weights.tech }}" type="range" min="0" max="100" style="width:100%;accent-color:#14508c;"></label>
+            <label style="display:block;margin:15px 0;"><span style="display:flex;justify-content:space-between;font-size:9px;color:#5c6572;">산업역량진단<b style="color:#14508c;">{{ weightLabels.industry }}</b></span><input onChange="{{ handlers.setWeightIndustry }}" value="{{ state.weights.industry }}" type="range" min="0" max="100" style="width:100%;accent-color:#14508c;"></label>
             <button onClick="{{ handlers.recalculate }}" style="width:100%;margin-top:10px;border:0;background:#0a2f6b;color:#fff;border-radius:4px;padding:9px;font-size:10.5px;font-weight:700;">가중치 적용·재계산</button>
             <p style="font-size:8.5px;color:#8b93a1;background:#f1f3f6;padding:9px;border-radius:5px;margin-top:12px;">가중치 변경은 화면 시뮬레이션에만 반영됩니다. 결과 확정 전까지 원본 점수는 유지됩니다.</p>
           </article>
@@ -792,15 +792,16 @@ class Component extends DCLogic {
     { name: "SP인증 SW교육", points: 5, completed: true },
     { name: "AWS DevOps", points: 2, completed: false },
   ];
+  departments = ["품질혁신팀", "인사팀", "재무팀", "공통지원팀", "공통플랫폼팀", "AX운영팀", "클라우드운영팀", "보안컨설팅팀", "인프라SRE팀", "뱅킹 IS팀"];
   membersInit = [
-    { id: 1, name: "직원 A", department: "디지털혁신팀", job: "QA", grade: "S2", level: 6, score: 81, previous: 76, multi: 86, tech: 83, industry: 78, cert: 12, status: "우수", watch: false },
-    { id: 2, name: "직원 B", department: "디지털혁신팀", job: "QA", grade: "S2", level: 5, score: 70, previous: 67, multi: 76, tech: 72, industry: 66, cert: 9, status: "적정", watch: false },
-    { id: 3, name: "직원 C", department: "보안서비스팀", job: "보안컨설팅", grade: "S2", level: 5, score: 68, previous: 71, multi: 72, tech: 74, industry: 61, cert: 8, status: "관찰", watch: true },
-    { id: 4, name: "직원 D", department: "디지털혁신팀", job: "TA", grade: "S1", level: 4, score: 62, previous: 58, multi: 69, tech: 60, industry: 57, cert: 6, status: "적정", watch: false },
-    { id: 5, name: "직원 E", department: "데이터플랫폼팀", job: "Application Engineering", grade: "S1", level: 3, score: 56, previous: 61, multi: 64, tech: 51, industry: 53, cert: 4, status: "관찰", watch: true },
-    { id: 6, name: "직원 F", department: "클라우드플랫폼팀", job: "클라우드 운영", grade: "L", level: 6, score: 84, previous: 79, multi: 88, tech: 87, industry: 77, cert: 14, status: "전문가", watch: false },
-    { id: 7, name: "직원 G", department: "보안서비스팀", job: "모의해킹", grade: "M2", level: 3, score: 57, previous: 63, multi: 66, tech: 58, industry: 45, cert: 7, status: "미응시", watch: true },
-    { id: 8, name: "직원 H", department: "데이터플랫폼팀", job: "DBA", grade: "S2", level: 5, score: 73, previous: 70, multi: 75, tech: 82, industry: 62, cert: 11, status: "적정", watch: false },
+    { id: 1, name: "직원 A", department: "품질혁신팀", job: "QA", grade: "S2", level: 6, score: 81, previous: 76, multi: 86, tech: 83, industry: 78, cert: 12, status: "우수", watch: false },
+    { id: 2, name: "직원 B", department: "품질혁신팀", job: "QA", grade: "S2", level: 5, score: 70, previous: 67, multi: 76, tech: 72, industry: 66, cert: 9, status: "적정", watch: false },
+    { id: 3, name: "직원 C", department: "보안컨설팅팀", job: "보안컨설팅", grade: "S2", level: 5, score: 68, previous: 71, multi: 72, tech: 74, industry: 61, cert: 8, status: "관찰", watch: true },
+    { id: 4, name: "직원 D", department: "품질혁신팀", job: "TA", grade: "S1", level: 4, score: 62, previous: 58, multi: 69, tech: 60, industry: 57, cert: 6, status: "적정", watch: false },
+    { id: 5, name: "직원 E", department: "인프라SRE팀", job: "Application Engineering", grade: "S1", level: 3, score: 56, previous: 61, multi: 64, tech: 51, industry: 53, cert: 4, status: "관찰", watch: true },
+    { id: 6, name: "직원 F", department: "클라우드운영팀", job: "클라우드 운영", grade: "L", level: 6, score: 84, previous: 79, multi: 88, tech: 87, industry: 77, cert: 14, status: "전문가", watch: false },
+    { id: 7, name: "직원 G", department: "보안컨설팅팀", job: "모의해킹", grade: "M2", level: 3, score: 57, previous: 63, multi: 66, tech: 58, industry: 45, cert: 7, status: "미응시", watch: true },
+    { id: 8, name: "직원 H", department: "인프라SRE팀", job: "DBA", grade: "S2", level: 5, score: 73, previous: 70, multi: 75, tech: 82, industry: 62, cert: 11, status: "적정", watch: false },
   ];
   jobsInit = [
     { id: "R0001", group: "개발", name: "Application Engineering", purpose: "비즈니스 요구를 안정적인 디지털 서비스로 구현하고 End-to-End 품질을 책임집니다.", people: 42, level: 7, skills: ["Java/Spring", "API 설계", "클라우드", "DevOps"], certs: ["정보처리기사", "AWS SAA", "PMP"], updated: "2026-05-28" },
@@ -927,7 +928,7 @@ class Component extends DCLogic {
 
     // ---- org view ----
     const filtered = this.filteredMembers();
-    const deptOptions = this.unique("department");
+    const deptOptions = ["전체", ...this.departments];
     const gradeOptions = this.unique("grade");
     const jobOptions = this.unique("job");
     const avg = filtered.length ? Math.round(filtered.reduce((sum, m) => sum + m.score, 0) / filtered.length) : 0;

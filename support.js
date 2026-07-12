@@ -148,16 +148,64 @@
       return;
     }
 
+    function capturePathTo(el) {
+      const path = [];
+      let node = el;
+      while (node && node !== root) {
+        const parent = node.parentElement;
+        if (!parent) return null;
+        path.unshift(Array.prototype.indexOf.call(parent.children, node));
+        node = parent;
+      }
+      return path;
+    }
+
+    function resolvePath(path) {
+      let node = root;
+      for (const index of path) {
+        node = node && node.children[index];
+        if (!node) return null;
+      }
+      return node;
+    }
+
+    // Every setState() re-renders by replacing the whole subtree, which would
+    // otherwise drop keyboard focus and interrupt in-progress interactions
+    // (typing, dragging) on every keystroke/input tick. Re-focus the element
+    // at the same tree position after each render so those keep working.
+    function captureActive() {
+      const active = document.activeElement;
+      if (!active || active === document.body || !root.contains(active)) return null;
+      const path = capturePathTo(active);
+      if (!path) return null;
+      const selection = typeof active.selectionStart === "number"
+        ? [active.selectionStart, active.selectionEnd]
+        : null;
+      return { path, selection };
+    }
+
+    function restoreActive(captured) {
+      if (!captured) return;
+      const node = resolvePath(captured.path);
+      if (!node || typeof node.focus !== "function") return;
+      node.focus({ preventScroll: true });
+      if (captured.selection && typeof node.setSelectionRange === "function") {
+        try { node.setSelectionRange(captured.selection[0], captured.selection[1]); } catch (error) { /* not a text-selectable input */ }
+      }
+    }
+
     const component = new ComponentClass();
     component.__render = () => {
       const scrollX = window.scrollX;
       const scrollY = window.scrollY;
+      const activeCapture = captureActive();
       const values = component.renderVals();
       const scope = Object.assign(Object.create(null), values);
       const template = document.createElement("template");
       template.innerHTML = templateSource;
       [...template.content.childNodes].forEach(child => processNode(child, scope));
       root.replaceChildren(template.content);
+      restoreActive(activeCapture);
       requestAnimationFrame(() => window.scrollTo(scrollX, scrollY));
     };
     component.__render();
