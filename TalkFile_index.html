@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SHINHAN DS 역량 메타인지</title>
+<meta name="description" content="SHINHAN DS HR 메타인지">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #f1f3f6; color: #1b2433; font-family: Pretendard, "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; letter-spacing: -0.01em; font-size: 13px; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: #14508c; }
+    button, select, input, textarea { font: inherit; }
+    button { cursor: pointer; }
+    table { border-collapse: collapse; width: 100%; }
+    section[data-jump] { scroll-margin-top: 72px; }
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-thumb { background: #c7cfda; border-radius: 4px; }
+    @keyframes modalIn { from { opacity: 0; transform: translateY(6px) scale(.99); } to { opacity: 1; transform: none; } }
+  </style>
+</helmet>
+
+<div style="min-height:100vh;display:flex;flex-direction:column;background:#f1f3f6;">
+
+  <header style="height:56px;padding:0 24px;background:#0a2f6b;color:#fff;display:flex;align-items:center;gap:22px;position:sticky;top:0;z-index:30;border-bottom:1px solid rgba(255,255,255,.10);">
+    <div style="display:flex;align-items:center;gap:10px;min-width:230px;">
+      <div style="width:30px;height:30px;border-radius:4px;background:#fff;color:#0a2f6b;font-size:15px;font-weight:800;display:grid;place-items:center;">S</div>
+      <div style="display:flex;align-items:baseline;gap:9px;">
+        <b style="font-size:13.5px;">SHINHAN DS</b>
+        <small style="font-size:10.5px;opacity:.62;font-weight:500;">e-HR 역량·메타인지</small>
+      </div>
+    </div>
+    <div style="display:flex;gap:6px;">
+      <span style="padding:3px 9px;border:1px solid rgba(255,255,255,.22);border-radius:4px;font-size:10px;font-weight:600;">2026 역량 Level</span>
+      <span style="padding:3px 9px;border:1px solid rgba(255,255,255,.22);border-radius:4px;font-size:10px;font-weight:600;">월별 배치</span>
+    </div>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:14px;">
+      <div style="display:grid;grid-template-columns:28px auto;column-gap:8px;align-items:center;">
+        <span style="grid-row:1/3;width:28px;height:28px;border-radius:4px;background:rgba(255,255,255,.15);display:grid;place-items:center;font-weight:700;font-size:11px;">샘</span>
+        <b style="font-size:12.5px;line-height:1.3;">샘플 사용자</b>
+        <small style="font-size:10px;opacity:.62;">프로(수석)</small>
+      </div>
+    </div>
+  </header>
+
+  <div style="display:grid;grid-template-columns:216px minmax(0,1fr);flex:1;min-height:0;">
+
+    <aside style="background:#fff;border-right:1px solid #d9dee6;padding:20px 12px;display:flex;flex-direction:column;position:sticky;top:56px;align-self:start;height:calc(100vh - 56px);overflow-y:auto;">
+      <nav>
+        <p style="font-size:9.5px;text-transform:uppercase;letter-spacing:1px;color:#8b93a1;font-weight:700;margin:0 10px 7px;">인재 성장</p>
+        <a href="#sec-meta" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:5px;color:#5c6572;font-weight:600;margin:2px 0;font-size:11.5px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l4-6 4 3 5-7 5 8" stroke-linecap="round" stroke-linejoin="round"/></svg>역량 메타인지</a>
+        <a href="#sec-levels" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:5px;color:#5c6572;font-weight:600;margin:2px 0;font-size:11.5px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20a8 8 0 1 1 16 0" stroke-linecap="round"/><path d="M12 20V11M12 11l4-3" stroke-linecap="round"/></svg>역량 Level 조회</a>
+        <a href="#sec-jobs" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:5px;color:#5c6572;font-weight:600;margin:2px 0;font-size:11.5px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4" stroke-linecap="round"/></svg>직무 정의서</a>
+        <p style="font-size:9.5px;text-transform:uppercase;letter-spacing:1px;color:#8b93a1;font-weight:700;margin:18px 10px 7px;">평가 관리</p>
+        <a href="#sec-multi" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:5px;color:#5c6572;font-weight:600;margin:2px 0;font-size:11.5px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><path d="M2.5 19c0-3.3 2.9-5 6.5-5s6.5 1.7 6.5 5" stroke-linecap="round"/><circle cx="17.5" cy="7.5" r="2.3"/><path d="M14.7 19c.3-2.4 1.9-4 4.5-4 2 0 3.6.9 4.1 2.6" stroke-linecap="round"/></svg>다면역량진단<em style="margin-left:auto;padding:2px 6px;border-radius:4px;background:#eef2f8;color:#14508c;font-size:8px;font-style:normal;font-weight:700;">진행중</em></a>
+        <a href="#sec-tech" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:5px;color:#5c6572;font-weight:600;margin:2px 0;font-size:11.5px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 16v-4M12 16V8M16 16v-6" stroke-linecap="round"/></svg> 성과평가</a>
+        <a href="#sec-results" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:5px;color:#5c6572;font-weight:600;margin:2px 0;font-size:11.5px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="4" width="14" height="17" rx="1.5"/><path d="M9 2.5h6v3H9z"/><path d="M9 13l2 2 4-4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>평가 결과</a>
+        <p style="font-size:9.5px;text-transform:uppercase;letter-spacing:1px;color:#8b93a1;font-weight:700;margin:18px 10px 7px;">성장 지원</p>
+        <a href="#sec-learning" style="display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:5px;color:#5c6572;font-weight:600;margin:2px 0;font-size:11.5px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5.2C4 4.2 4.9 3.6 6 3.6c2.4 0 4.5.9 6 2.1 1.5-1.2 3.6-2.1 6-2.1 1.1 0 2 .6 2 1.6v13c0 .9-.9 1.4-2 1.4-2.4 0-4.5.7-6 1.9-1.5-1.2-3.6-1.9-6-1.9-1.1 0-2-.5-2-1.4z"/><path d="M12 5.7v13.6"/></svg>추천 교육·자격<em style="margin-left:auto;padding:2px 6px;border-radius:4px;background:#eef2f8;color:#14508c;font-size:8px;font-style:normal;font-weight:700;">3</em></a>
+      </nav>
+      <div style="margin-top:auto;border:1px solid #d9dee6;border-radius:6px;padding:10px;display:flex;align-items:center;gap:9px;">
+        <span style="width:22px;height:22px;border-radius:4px;background:#eef2f8;color:#14508c;font-weight:700;font-size:10px;display:grid;place-items:center;">i</span>
+        <div style="display:flex;flex-direction:column;"><b style="font-size:9.5px;">데이터 기준</b><small style="font-size:8.5px;color:#8b93a1;">2026년 6월 말 배치</small></div>
+      </div>
+    </aside>
+
+    <main style="min-width:0;padding:22px clamp(16px,3vw,40px) 60px;max-width:1560px;width:100%;margin:0 auto;display:flex;flex-direction:column;gap:34px;">
+
+      <!-- ============ SECTION: META ============ -->
+      <section id="sec-meta" data-jump data-screen-label="역량 메타인지">
+        <div style="font-size:11px;color:#8b93a1;margin-bottom:10px;">e-HR <span style="margin:0 6px;">›</span> 인재성장 <span style="margin:0 6px;">›</span> 메타인지</div>
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:16px;">
+          <div>
+            <p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">MY GROWTH INSIGHT</p>
+            <h1 style="font-size:22px;line-height:1.2;margin:4px 0 6px;letter-spacing:-.5px;font-weight:700;">역량 메타인지</h1>
+            <p style="margin:0;color:#5c6572;font-size:12px;">현재 수준을 이해하고 다음 성장을 위한 근거와 행동을 확인합니다.</p>
+          </div>
+          <div role="tablist" style="display:flex;padding:3px;background:#fff;border:1px solid #d9dee6;border-radius:6px;">
+            <button onClick="{{ handlers.viewMy }}" style="{{ viewBtnStyle.my }}">나의 역량</button>
+            <button onClick="{{ handlers.viewOrg }}" style="{{ viewBtnStyle.org }}">조직 분석</button>
+          </div>
+        </div>
+
+        <sc-if value="{{ isViewMy }}" hint-placeholder-val="{{ true }}">
+          <article style="display:flex;align-items:center;padding:16px 18px;gap:14px;margin-bottom:14px;background:#fff;border:1px solid #d9dee6;border-radius:6px;">
+            <div style="width:44px;height:44px;flex:0 0 auto;border-radius:6px;background:#eef2f8;color:#0a3d80;font-size:16px;font-weight:800;display:grid;place-items:center;">샘</div>
+            <div style="flex:0 0 160px;display:flex;flex-direction:column;"><strong style="font-size:14px;">샘플 사용자</strong><span style="font-size:10px;color:#5c6572;">프로(수석) · 품질혁신팀</span></div>
+            <dl style="display:grid;grid-template-columns:repeat(3,minmax(120px,1fr));margin:0;gap:8px 22px;flex:1;border-left:1px solid #d9dee6;padding-left:20px;">
+              <div style="display:flex;gap:8px;align-items:baseline;"><dt style="color:#8b93a1;font-size:9.5px;min-width:56px;margin:0;">사번</dt><dd style="margin:0;font-size:11px;font-weight:600;">030520</dd></div>
+              <div style="display:flex;gap:8px;align-items:baseline;"><dt style="color:#8b93a1;font-size:9.5px;min-width:56px;margin:0;">직급</dt><dd style="margin:0;font-size:11px;font-weight:600;">S2</dd></div>
+              <div style="display:flex;gap:8px;align-items:baseline;"><dt style="color:#8b93a1;font-size:9.5px;min-width:56px;margin:0;">입사일</dt><dd style="margin:0;font-size:11px;font-weight:600;">2023-05-02</dd></div>
+              <div style="display:flex;gap:8px;align-items:baseline;"><dt style="color:#8b93a1;font-size:9.5px;min-width:56px;margin:0;">최근 승진일</dt><dd style="margin:0;font-size:11px;font-weight:600;">2025-04-01</dd></div>
+              <div style="display:flex;gap:8px;align-items:baseline;"><dt style="color:#8b93a1;font-size:9.5px;min-width:56px;margin:0;">차기 승진 예정</dt><dd style="margin:0;font-size:11px;font-weight:600;">2027-04-01</dd></div>
+              <div style="display:flex;gap:8px;align-items:baseline;"><dt style="color:#8b93a1;font-size:9.5px;min-width:56px;margin:0;">현 직무</dt><dd style="margin:0;font-size:11px;font-weight:600;">ICT공통 · QA</dd></div>
+            </dl>
+            <div style="align-self:stretch;min-width:110px;background:#0a2f6b;color:#fff;border-radius:6px;padding:10px 14px;display:grid;grid-template-columns:1fr auto;align-content:center;">
+              <span style="font-size:9px;opacity:.68;">현재 역량</span><strong style="grid-row:1/3;grid-column:2;font-size:22px;">Lv.5</strong><small style="font-size:9px;opacity:.78;">표준 Lv.6</small>
+            </div>
+          </article>
+
+          <nav style="display:flex;width:max-content;padding:3px;background:#fff;border:1px solid #d9dee6;border-radius:6px;margin:0 0 14px;">
+            <button onClick="{{ handlers.tabCompetency }}" style="{{ tabBtnStyle.competency }}">역량</button>
+            <button onClick="{{ handlers.tabPerformance }}" style="{{ tabBtnStyle.performance }}">성과</button>
+            <button onClick="{{ handlers.tabSkills }}" style="{{ tabBtnStyle.skills }}">보유기술</button>
+            <button onClick="{{ handlers.tabWork }}" style="{{ tabBtnStyle.work }}">근무현황</button>
+            <button onClick="{{ handlers.tabTotal }}" style="{{ tabBtnStyle.total }}">종합지표</button>
+          </nav>
+
+          <sc-if value="{{ isTabCompetency }}" hint-placeholder-val="{{ true }}">
+            <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:14px;">
+              <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:18px 19px;">
+                <div style="display:flex;justify-content:space-between;gap:12px;margin-bottom:12px;"><div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">2026 역량 LEVEL</p><h2 style="font-size:14.5px;margin:3px 0 0;font-weight:700;">현재와 내년 예측</h2></div><span style="font-size:9px;font-weight:700;border-radius:4px;padding:4px 8px;background:#eef2f8;color:#14508c;white-space:nowrap;height:fit-content;">매월 말 반영</span></div>
+                <div style="display:flex;justify-content:center;align-items:center;gap:20px;padding:4px 0 11px;">
+                  <div style="width:118px;height:118px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(#14508c 252deg, #d9dee6 0);position:relative;">
+                    <div style="position:absolute;inset:9px;border-radius:50%;background:#fff;"></div>
+                    <div style="position:relative;z-index:1;text-align:center;display:flex;flex-direction:column;"><small style="font-size:9px;color:#8b93a1;">현재</small><strong style="font-size:25px;color:#0a2f6b;">Lv.5</strong><span style="font-size:10px;color:#5c6572;">70점</span></div>
+                  </div>
+                  <div style="text-align:center;color:#14508c;display:flex;flex-direction:column;"><b style="font-size:26px;font-weight:300;">→</b><small style="font-size:9px;">+6점</small></div>
+                  <div style="width:118px;height:118px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(#0f7a5e 274deg, #d9dee6 0);position:relative;">
+                    <div style="position:absolute;inset:9px;border-radius:50%;background:#fff;"></div>
+                    <div style="position:relative;z-index:1;text-align:center;display:flex;flex-direction:column;"><small style="font-size:9px;color:#8b93a1;">2027 예측</small><strong style="font-size:25px;color:#0a2f6b;">Lv.6</strong><span style="font-size:10px;color:#5c6572;">76점</span></div>
+                  </div>
+                </div>
+                <p style="margin:0;border-radius:6px;background:#eef2f8;padding:10px 12px;font-size:10.5px;color:#5c6572;line-height:1.6;"><span style="color:#0f7a5e;font-weight:700;">↗</span> 자격증과 교육 이수 예정분 반영 시 <b style="color:#14508c;">Lv.6</b> 진입이 예상됩니다. 업무 전문성과 변화 추진이 우선 보완 영역입니다.</p>
+              </article>
+              <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:18px 19px;">
+                <div style="display:flex;justify-content:space-between;gap:12px;margin-bottom:12px;"><div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">다면역량진단</p><h2 style="font-size:14.5px;margin:3px 0 0;font-weight:700;">영역별 강점·약점</h2></div><span style="font-size:9px;font-weight:700;border-radius:4px;padding:4px 8px;background:#eef2f8;color:#14508c;white-space:nowrap;height:fit-content;">직무·부서 대비</span></div>
+                <div style="min-height:200px;display:grid;place-items:center;">
+                  <svg viewBox="0 0 300 300" width="280" height="240" style="overflow:visible;">
+                    <sc-for list="{{ radarRings }}" as="ring" hint-placeholder-count="5"><polygon points="{{ ring.points }}" fill="none" stroke="#d9dee6" stroke-width="1"></polygon></sc-for>
+                    <sc-for list="{{ radarAxes }}" as="ax" hint-placeholder-count="6"><line x1="150" y1="150" x2="{{ ax.x }}" y2="{{ ax.y }}" stroke="#d9dee6" stroke-width="1"></line></sc-for>
+                    <polygon points="{{ radarTeamPoints }}" fill="rgba(15,122,94,.08)" stroke="#0f7a5e" stroke-width="1.5" stroke-dasharray="4 3"></polygon>
+                    <polygon points="{{ radarMePoints }}" fill="rgba(20,80,140,.16)" stroke="#14508c" stroke-width="2"></polygon>
+                    <sc-for list="{{ radarLabels }}" as="lb" hint-placeholder-count="6"><text x="{{ lb.x }}" y="{{ lb.y }}" text-anchor="middle" dominant-baseline="middle" style="font-size:9.5px;fill:#5c6572;font-weight:600;">{{ lb.label }}</text></sc-for>
+                  </svg>
+                </div>
+                <div style="display:flex;justify-content:center;gap:16px;font-size:9.5px;color:#5c6572;">
+                  <span style="display:flex;align-items:center;gap:5px;"><i style="width:8px;height:8px;border-radius:2px;background:#14508c;display:inline-block;"></i>본인</span>
+                  <span style="display:flex;align-items:center;gap:5px;"><i style="width:8px;height:8px;border-radius:2px;background:#0f7a5e;display:inline-block;"></i>조직 평균</span>
+                </div>
+              </article>
+              <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:18px 19px;">
+                <div style="display:flex;justify-content:space-between;gap:12px;margin-bottom:12px;"><div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">산출 근거</p><h2 style="font-size:14.5px;margin:3px 0 0;font-weight:700;">항목별 점수</h2></div><strong style="font-size:17px;color:#0a2f6b;">70점</strong></div>
+                <div style="display:flex;flex-direction:column;gap:5px;">
+                  <sc-for list="{{ scoreComponentsList }}" as="sc" hint-placeholder-count="5">
+                    <button onClick="{{ sc.onClick }}" style="{{ sc.btnStyle }}">
+                      <span style="display:flex;flex-direction:column;font-size:11px;font-weight:700;">{{ sc.label }}<small style="font-size:8.5px;color:#8b93a1;font-weight:500;">{{ sc.detail }}</small></span>
+                      <div style="height:7px;background:#d9dee6;border-radius:4px;overflow:hidden;"><i style="{{ sc.meterStyle }}"></i></div>
+                      <b style="text-align:right;font-size:13px;color:#0a2f6b;">{{ sc.score }}<em style="font-size:8.5px;font-style:normal;color:#8b93a1;">/{{ sc.max }}</em></b>
+                    </button>
+                  </sc-for>
+                </div>
+              </article>
+              <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:18px 19px;">
+                <div style="display:flex;justify-content:space-between;gap:12px;margin-bottom:12px;"><div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">직무 적합도</p><h2 style="font-size:14.5px;margin:3px 0 0;font-weight:700;">필수 요건 Gap</h2></div><span style="font-size:9px;font-weight:700;border-radius:4px;padding:4px 8px;background:#fbeae7;color:#b23b2e;white-space:nowrap;height:fit-content;">2개 보완 필요</span></div>
+                <div style="display:flex;flex-direction:column;">
+                  <div style="display:grid;grid-template-columns:76px 1fr auto;align-items:center;padding:11px 0;border-bottom:1px solid #d9dee6;gap:8px;"><span style="font-size:9px;color:#8b93a1;">필수 자격</span><strong style="font-size:11px;font-weight:600;">정보관리기술사</strong><em style="font-size:9px;font-style:normal;color:#b23b2e;background:#fbeae7;padding:3px 7px;border-radius:4px;">미보유</em></div>
+                  <div style="display:grid;grid-template-columns:76px 1fr auto;align-items:center;padding:11px 0;border-bottom:1px solid #d9dee6;gap:8px;"><span style="font-size:9px;color:#8b93a1;">필수 교육</span><strong style="font-size:11px;font-weight:600;">요구공학·AI 이해</strong><em style="font-size:9px;font-style:normal;color:#b23b2e;background:#fbeae7;padding:3px 7px;border-radius:4px;">미이수</em></div>
+                  <div style="display:grid;grid-template-columns:76px 1fr auto;align-items:center;padding:11px 0;gap:8px;"><span style="font-size:9px;color:#8b93a1;">추천 과정</span><strong style="font-size:11px;font-weight:600;">AWS DevOps</strong><em style="font-size:9px;font-style:normal;color:#a97324;background:#faf1e2;padding:3px 7px;border-radius:4px;">신청 예정</em></div>
+                </div>
+                <button style="width:100%;margin-top:14px;border:1px solid #14508c;background:transparent;color:#14508c;padding:8px;border-radius:4px;font-size:10px;font-weight:700;">성장 계획에 추가 <span style="float:right;font-size:14px;line-height:1;">+</span></button>
+              </article>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ isTabSkills }}" hint-placeholder-val="{{ false }}">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+              <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:19px 20px;">
+                <div style="display:flex;justify-content:space-between;gap:12px;margin-bottom:12px;"><div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">보유 자격</p><h2 style="font-size:14.5px;margin:3px 0 0;font-weight:700;">자격증 및 직무 매칭</h2></div><strong style="font-size:16px;color:#0a2f6b;">9점</strong></div>
+                <sc-for list="{{ certificates }}" as="c" hint-placeholder-count="3">
+                  <div style="display:grid;grid-template-columns:26px 1fr auto;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid #d9dee6;">
+                    <span style="width:26px;height:26px;border-radius:5px;display:grid;place-items:center;background:#e8f5f0;color:#0f7a5e;font-weight:800;">✓</span>
+                    <span style="display:flex;flex-direction:column;"><b style="font-size:11px;">{{ c.name }}</b><small style="font-size:9px;color:#8b93a1;">{{ c.grade }} · 현 직무 매칭</small></span>
+                    <strong style="font-size:11px;color:#14508c;">+{{ c.points }}</strong>
+                  </div>
+                </sc-for>
+              </article>
+              <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:19px 20px;">
+                <div style="display:flex;justify-content:space-between;gap:12px;margin-bottom:12px;"><div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">교육 이력</p><h2 style="font-size:14.5px;margin:3px 0 0;font-weight:700;">교육 이수 및 포인트</h2></div><strong style="font-size:16px;color:#0a2f6b;">10점</strong></div>
+                <sc-for list="{{ education }}" as="e" hint-placeholder-count="3">
+                  <div style="display:grid;grid-template-columns:26px 1fr auto;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid #d9dee6;">
+                    <span style="{{ e.iconStyle }}">{{ e.iconText }}</span>
+                    <span style="display:flex;flex-direction:column;"><b style="font-size:11px;">{{ e.name }}</b><small style="font-size:9px;color:#8b93a1;">{{ e.statusText }}</small></span>
+                    <strong style="font-size:11px;color:#14508c;">{{ e.pointsText }}</strong>
+                  </div>
+                </sc-for>
+              </article>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ isTabSummary }}" hint-placeholder-val="{{ false }}">
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+              <sc-for list="{{ summaryCards }}" as="card" hint-placeholder-count="3">
+                <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:22px;display:flex;flex-direction:column;">
+                  <span style="font-size:10px;color:#5c6572;">{{ card.label }}</span><strong style="font-size:22px;color:#0a2f6b;margin:6px 0;">{{ card.value }}</strong><small style="font-size:9px;color:#8b93a1;">{{ card.note }}</small>
+                </article>
+              </sc-for>
+            </div>
+          </sc-if>
+        </sc-if>
+
+        <sc-if value="{{ isViewOrg }}" hint-placeholder-val="{{ false }}">
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:16px 18px;display:grid;grid-template-columns:minmax(190px,1fr) repeat(3,150px) auto;align-items:end;gap:12px;margin-bottom:14px;">
+            <div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">조회 기준</p><h2 style="font-size:14.5px;margin:3px 0 0;font-weight:700;">조직 역량 현황</h2></div>
+            <label style="font-size:9px;color:#8b93a1;display:flex;flex-direction:column;gap:5px;">조직
+              <select onChange="{{ handlers.setDept }}" value="{{ state.deptFilter }}" style="height:34px;border:1px solid #d9dee6;border-radius:4px;padding:0 9px;background:#fff;color:#1b2433;font-size:10.5px;">
+                <sc-for list="{{ deptOptions }}" as="o" hint-placeholder-count="4"><option value="{{ o }}">{{ o }}</option></sc-for>
+              </select>
+            </label>
+            <label style="font-size:9px;color:#8b93a1;display:flex;flex-direction:column;gap:5px;">직급
+              <select onChange="{{ handlers.setGrade }}" value="{{ state.gradeFilter }}" style="height:34px;border:1px solid #d9dee6;border-radius:4px;padding:0 9px;background:#fff;color:#1b2433;font-size:10.5px;">
+                <sc-for list="{{ gradeOptions }}" as="o" hint-placeholder-count="4"><option value="{{ o }}">{{ o }}</option></sc-for>
+              </select>
+            </label>
+            <label style="font-size:9px;color:#8b93a1;display:flex;flex-direction:column;gap:5px;">직무
+              <select onChange="{{ handlers.setJob }}" value="{{ state.jobFilter }}" style="height:34px;border:1px solid #d9dee6;border-radius:4px;padding:0 9px;background:#fff;color:#1b2433;font-size:10.5px;">
+                <sc-for list="{{ jobOptions }}" as="o" hint-placeholder-count="4"><option value="{{ o }}">{{ o }}</option></sc-for>
+              </select>
+            </label>
+            <button onClick="{{ handlers.resetFilters }}" style="height:34px;border:1px solid #d9dee6;background:#fff;color:#5c6572;border-radius:4px;padding:0 13px;font-size:10px;font-weight:700;">초기화</button>
+          </article>
+
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px;">
+            <sc-for list="{{ orgKpis }}" as="k" hint-placeholder-count="4">
+              <article style="{{ k.cardStyle }}"><span style="font-size:9px;color:#5c6572;">{{ k.label }}</span><strong style="{{ k.valueStyle }}">{{ k.value }}</strong><small style="font-size:8.5px;color:#8b93a1;">{{ k.note }}</small></article>
+            </sc-for>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:14px;margin-bottom:14px;">
+            <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:18px 19px;">
+              <div style="display:flex;justify-content:space-between;gap:12px;margin-bottom:12px;"><div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">직전 회차 대비</p><h2 style="font-size:14.5px;margin:3px 0 0;font-weight:700;">구성원 역량 분포</h2></div><span style="font-size:9px;font-weight:700;border-radius:4px;padding:4px 8px;background:#eef2f8;color:#14508c;white-space:nowrap;height:fit-content;">2026-06 기준</span></div>
+              <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
+                <sc-for list="{{ memberBars }}" as="m" hint-placeholder-count="8">
+                  <div style="display:grid;grid-template-columns:44px 1fr 28px;gap:8px;align-items:center;font-size:9px;">
+                    <span style="color:#5c6572;text-align:right;">{{ m.name }}</span>
+                    <div style="height:12px;background:#f1f3f6;border-radius:3px;position:relative;"><i style="{{ m.barStyle }}"></i><b style="{{ m.prevMarkStyle }}"></b></div>
+                    <strong style="font-size:10px;color:#0a2f6b;">{{ m.score }}</strong>
+                  </div>
+                </sc-for>
+              </div>
+              <div style="display:flex;justify-content:flex-end;gap:14px;margin-top:12px;font-size:8.5px;color:#8b93a1;">
+                <span style="display:flex;align-items:center;gap:5px;"><i style="width:14px;height:5px;border-radius:2px;background:#14508c;display:inline-block;"></i>현재 점수</span>
+                <span style="display:flex;align-items:center;gap:5px;"><i style="width:2px;height:10px;background:#1b2433;display:inline-block;"></i>직전 회차</span>
+              </div>
+            </article>
+            <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:18px 19px;">
+              <div style="display:flex;justify-content:space-between;gap:12px;margin-bottom:12px;"><div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">예측 및 판단</p><h2 style="font-size:14.5px;margin:3px 0 0;font-weight:700;">관심 직원</h2></div><span style="font-size:9px;font-weight:700;border-radius:4px;padding:4px 8px;background:#fbeae7;color:#b23b2e;white-space:nowrap;height:fit-content;">{{ watchCountText }}</span></div>
+              <sc-if value="{{ hasWatch }}" hint-placeholder-val="{{ true }}">
+                <div style="display:flex;flex-direction:column;">
+                  <sc-for list="{{ watchList }}" as="w" hint-placeholder-count="2">
+                    <div style="display:grid;grid-template-columns:26px 1fr auto 20px;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid #d9dee6;">
+                      <span style="width:26px;height:26px;border-radius:5px;background:#eef2f8;color:#14508c;display:grid;place-items:center;font-weight:700;">{{ w.initial }}</span>
+                      <span style="display:flex;flex-direction:column;"><b style="font-size:10px;">{{ w.name }}</b><small style="font-size:8.5px;color:#8b93a1;">{{ w.job }} · {{ w.grade }}</small></span>
+                      <em style="font-size:8px;font-style:normal;color:#b23b2e;background:#fbeae7;padding:3px 6px;border-radius:4px;">{{ w.statusText }}</em>
+                      <button onClick="{{ w.onUnwatch }}" style="border:0;background:transparent;color:#8b93a1;font-size:14px;">×</button>
+                    </div>
+                  </sc-for>
+                </div>
+              </sc-if>
+              <sc-if value="{{ hasNoWatch }}" hint-placeholder-val="{{ false }}"><p style="font-size:10px;color:#8b93a1;text-align:center;padding:24px;">관심 직원이 없습니다.</p></sc-if>
+            </article>
+          </div>
+
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:17px 19px;">
+            <div style="display:flex;justify-content:space-between;gap:12px;margin-bottom:12px;"><div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">상세 현황</p><h2 style="font-size:14.5px;margin:3px 0 0;font-weight:700;">구성원별 평가 결과</h2></div><button onClick="{{ handlers.downloadOrgCsv }}" style="height:34px;border:1px solid #d9dee6;background:#fff;color:#5c6572;border-radius:4px;padding:0 13px;font-size:10px;font-weight:700;">CSV 다운로드</button></div>
+            <div style="overflow-x:auto;">
+              <table style="font-size:10px;white-space:nowrap;">
+                <thead><tr>
+                  <th style="text-align:left;color:#8b93a1;font-size:8.5px;letter-spacing:.3px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">관심</th>
+                  <th style="text-align:left;color:#8b93a1;font-size:8.5px;letter-spacing:.3px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">성명</th>
+                  <th style="text-align:left;color:#8b93a1;font-size:8.5px;letter-spacing:.3px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">조직</th>
+                  <th style="text-align:left;color:#8b93a1;font-size:8.5px;letter-spacing:.3px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">직무</th>
+                  <th style="text-align:left;color:#8b93a1;font-size:8.5px;letter-spacing:.3px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">직급</th>
+                  <th style="text-align:left;color:#8b93a1;font-size:8.5px;letter-spacing:.3px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">역량 Level</th>
+                  <th style="text-align:left;color:#8b93a1;font-size:8.5px;letter-spacing:.3px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">점수</th>
+                  <th style="text-align:left;color:#8b93a1;font-size:8.5px;letter-spacing:.3px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">다면진단</th>
+                  <th style="text-align:left;color:#8b93a1;font-size:8.5px;letter-spacing:.3px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">자격증</th>
+                  <th style="text-align:left;color:#8b93a1;font-size:8.5px;letter-spacing:.3px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">상태</th>
+                </tr></thead>
+                <tbody>
+                  <sc-for list="{{ memberRows }}" as="r" hint-placeholder-count="8">
+                    <tr>
+                      <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;"><button onClick="{{ r.onWatch }}" style="{{ r.starStyle }}">{{ r.starChar }}</button></td>
+                      <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;"><b>{{ r.name }}</b></td>
+                      <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;">{{ r.department }}</td>
+                      <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;">{{ r.job }}</td>
+                      <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;">{{ r.grade }}</td>
+                      <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;"><span style="background:#eef2f8;color:#14508c;border-radius:4px;padding:3px 7px;font-weight:700;">Lv.{{ r.level }}</span></td>
+                      <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;"><b>{{ r.score }}</b> <small style="{{ r.trendStyle }}">{{ r.trendText }}</small></td>
+                      <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;">{{ r.multi }}</td>
+                      <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;">{{ r.cert }}점</td>
+                      <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;"><span style="{{ r.statusStyle }}">{{ r.status }}</span></td>
+                    </tr>
+                  </sc-for>
+                </tbody>
+              </table>
+              <sc-if value="{{ memberRowsEmpty }}" hint-placeholder-val="{{ false }}"><p style="text-align:center;color:#8b93a1;font-size:11px;padding:26px;">조건에 맞는 직원이 없습니다.</p></sc-if>
+            </div>
+          </article>
+        </sc-if>
+      </section>
+
+      <!-- ============ SECTION: LEVELS ============ -->
+      <section id="sec-levels" data-jump data-screen-label="역량 Level 조회">
+        <div style="font-size:11px;color:#8b93a1;margin-bottom:10px;">e-HR <span style="margin:0 6px;">›</span> 인재성장 <span style="margin:0 6px;">›</span> 역량 Level 조회</div>
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:16px;">
+          <div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">PEOPLE ANALYTICS</p><h1 style="font-size:22px;line-height:1.2;margin:4px 0 6px;letter-spacing:-.5px;font-weight:700;">역량 Level 조회</h1><p style="margin:0;color:#5c6572;font-size:12px;">조직·직무·직급별 역량 분포와 개인의 변화를 한눈에 확인합니다.</p></div>
+          <div style="display:flex;gap:8px;">
+            <button onClick="{{ handlers.levelExport }}" style="height:34px;border:1px solid #d9dee6;background:#fff;color:#5c6572;border-radius:4px;padding:0 13px;font-size:10px;font-weight:700;">CSV 다운로드</button>
+            <button onClick="{{ handlers.batchRun }}" style="height:34px;border:0;background:#0a2f6b;color:#fff;border-radius:4px;padding:0 15px;font-size:10px;font-weight:700;">월말 배치 실행</button>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px;">
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:15px 17px;"><span style="font-size:9px;color:#5c6572;">평균 Level</span><strong style="display:block;font-size:20px;color:#0a2f6b;margin:4px 0;">Lv.4.6</strong><small style="font-size:8.5px;color:#8b93a1;">전월 대비 +0.2</small></article>
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:15px 17px;"><span style="font-size:9px;color:#5c6572;">평균 점수</span><strong style="display:block;font-size:20px;color:#0a2f6b;margin:4px 0;">68.9</strong><small style="font-size:8.5px;color:#8b93a1;">전사 기준</small></article>
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:15px 17px;"><span style="font-size:9px;color:#5c6572;">상향 예측</span><strong style="display:block;font-size:20px;color:#0a2f6b;margin:4px 0;">3명</strong><small style="font-size:8.5px;color:#8b93a1;">차기 월말 기준</small></article>
+          <article style="background:#fff;border-top:3px solid #b23b2e;border-left:1px solid #d9dee6;border-right:1px solid #d9dee6;border-bottom:1px solid #d9dee6;border-radius:6px;padding:15px 17px;"><span style="font-size:9px;color:#5c6572;">저역량 관리</span><strong style="display:block;font-size:20px;color:#b23b2e;margin:4px 0;">2명</strong><small style="font-size:8.5px;color:#8b93a1;">Lv.3 이하</small></article>
+        </div>
+        <div style="display:grid;grid-template-columns:1.35fr 1fr;gap:14px;margin-bottom:14px;">
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:20px;">
+            <div style="display:flex;justify-content:space-between;gap:12px;margin-bottom:18px;"><div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">LEVEL DISTRIBUTION</p><h2 style="font-size:15.5px;margin:3px 0 0;font-weight:700;">역량 Level 분포</h2></div><span style="font-size:9px;font-weight:700;border-radius:4px;padding:4px 8px;background:#eef2f8;color:#14508c;white-space:nowrap;height:fit-content;">총 8명</span></div>
+            <div style="height:190px;display:flex;align-items:flex-end;justify-content:space-around;gap:10px;padding:10px 10px 0;">
+              <sc-for list="{{ distribution }}" as="d" hint-placeholder-count="7">
+                <div style="height:100%;flex:1;display:grid;grid-template-rows:auto 1fr auto;text-align:center;gap:5px;">
+                  <span style="font-size:9px;color:#5c6572;">{{ d.label }}</span>
+                  <div style="display:flex;align-items:flex-end;justify-content:center;border-bottom:1px solid #d9dee6;"><i style="{{ d.barStyle }}"></i></div>
+                  <b style="font-size:9px;color:#5c6572;">{{ d.count }}</b>
+                </div>
+              </sc-for>
+            </div>
+          </article>
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:20px;">
+            <div style="display:flex;justify-content:space-between;gap:12px;margin-bottom:18px;"><div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">LEVEL RULE</p><h2 style="font-size:15.5px;margin:3px 0 0;font-weight:700;">산정 기준</h2></div><button onClick="{{ handlers.openRuleModal }}" style="border:0;background:transparent;color:#14508c;font-size:9px;font-weight:700;">기준 편집</button></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;">
+              <sc-for list="{{ ruleList }}" as="rule" hint-placeholder-count="7">
+                <div style="display:flex;align-items:center;justify-content:space-between;background:#f1f3f6;padding:8px 10px;border-radius:5px;"><b style="font-size:10px;color:#14508c;">{{ rule.level }}</b><span style="font-size:9px;color:#5c6572;">{{ rule.rule }}</span></div>
+              </sc-for>
+            </div>
+          </article>
+        </div>
+        <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:18px 20px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:15px;">
+            <div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">EMPLOYEE LEVEL</p><h2 style="font-size:15.5px;margin:3px 0 0;font-weight:700;">직원별 역량 Level(부서장/관리자)</h2></div>
+            <div style="display:flex;gap:7px;">
+              <input onInput="{{ handlers.setLevelSearch }}" value="{{ state.levelSearch }}" type="search" placeholder="성명 또는 직무 검색" style="border:1px solid #d9dee6;background:#fff;color:#1b2433;height:34px;border-radius:4px;padding:0 10px;font-size:10.5px;">
+              <select onChange="{{ handlers.setLevelDept }}" value="{{ state.levelDept }}" style="border:1px solid #d9dee6;background:#fff;color:#1b2433;height:34px;border-radius:4px;padding:0 10px;font-size:10.5px;">
+                <sc-for list="{{ deptOptions }}" as="o" hint-placeholder-count="4"><option value="{{ o }}">{{ o }}</option></sc-for>
+              </select>
+            </div>
+          </div>
+          <div style="overflow-x:auto;">
+            <table style="font-size:10px;white-space:nowrap;">
+              <thead><tr>
+                <th style="text-align:left;color:#8b93a1;font-size:8.5px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">직원</th>
+                <th style="text-align:left;color:#8b93a1;font-size:8.5px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">조직</th>
+                <th style="text-align:left;color:#8b93a1;font-size:8.5px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">직무</th>
+                <th style="text-align:left;color:#8b93a1;font-size:8.5px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">직급</th>
+                <th style="text-align:left;color:#8b93a1;font-size:8.5px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">현재 Level</th>
+                <th style="text-align:left;color:#8b93a1;font-size:8.5px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">점수</th>
+                <th style="text-align:left;color:#8b93a1;font-size:8.5px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">전월</th>
+                <th style="text-align:left;color:#8b93a1;font-size:8.5px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">예측</th>
+                <th style="border-bottom:1px solid #d9dee6;padding:8px 10px;"></th>
+              </tr></thead>
+              <tbody>
+                <sc-for list="{{ levelRows }}" as="r" hint-placeholder-count="8">
+                  <tr>
+                    <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;"><span style="display:flex;align-items:center;gap:8px;"><i style="width:24px;height:24px;border-radius:5px;background:#eef2f8;color:#14508c;display:grid;place-items:center;font-style:normal;font-weight:700;font-size:9px;">{{ r.initial }}</i><b>{{ r.name }}</b></span></td>
+                    <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;">{{ r.department }}</td>
+                    <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;">{{ r.job }}</td>
+                    <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;">{{ r.grade }}</td>
+                    <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;"><span style="background:#eef2f8;color:#14508c;border-radius:4px;padding:3px 7px;font-weight:700;">Lv.{{ r.level }}</span></td>
+                    <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;"><b>{{ r.score }}</b></td>
+                    <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;"><small style="{{ r.trendStyle }}">{{ r.trendText }}</small></td>
+                    <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;">Lv.{{ r.predicted }}</td>
+                    <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;"><button onClick="{{ r.onDetail }}" style="border:1px solid #d9dee6;border-radius:4px;padding:5px 8px;background:#fff;color:#1b2433;font-size:9px;">상세</button></td>
+                  </tr>
+                </sc-for>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <!-- ============ SECTION: JOBS ============ -->
+      <section id="sec-jobs" data-jump data-screen-label="직무 정의서">
+        <div style="font-size:11px;color:#8b93a1;margin-bottom:10px;">e-HR <span style="margin:0 6px;">›</span> 인재성장 <span style="margin:0 6px;">›</span> 직무 정의서</div>
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:16px;">
+          <div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">JOB ARCHITECTURE</p><h1 style="font-size:22px;line-height:1.2;margin:4px 0 6px;letter-spacing:-.5px;font-weight:700;">직무 정의서</h1><p style="margin:0;color:#5c6572;font-size:12px;">직무 목적, 핵심 업무, 수준별 요구역량과 추천 자격을 관리합니다.</p></div>
+          <div style="display:flex;gap:8px;">
+            <button onClick="{{ handlers.jobExport }}" style="height:34px;border:1px solid #d9dee6;background:#fff;color:#5c6572;border-radius:4px;padding:0 13px;font-size:10px;font-weight:700;">목록 다운로드</button>
+            <button onClick="{{ handlers.openJobAdd }}" style="height:34px;border:0;background:#0a2f6b;color:#fff;border-radius:4px;padding:0 15px;font-size:10px;font-weight:700;">+ 직무 등록</button>
+          </div>
+        </div>
+        <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:13px 15px;display:flex;gap:10px;align-items:center;margin-bottom:14px;">
+          <div style="display:flex;align-items:center;gap:6px;flex:1;border:1px solid #d9dee6;border-radius:4px;padding-left:10px;">
+            <span style="font-size:15px;color:#8b93a1;">⌕</span>
+            <input onInput="{{ handlers.setJobSearch }}" value="{{ state.jobSearch }}" type="search" placeholder="직무명, 코드, 핵심 역량 검색" style="border:0;width:100%;outline:0;padding:9px 8px 9px 2px;background:transparent;">
+          </div>
+          <select onChange="{{ handlers.setJobGroup }}" value="{{ state.jobGroup }}" style="border:1px solid #d9dee6;background:#fff;color:#1b2433;height:34px;border-radius:4px;padding:0 10px;font-size:10.5px;">
+            <option>전체 직군</option><option>개발</option><option>인프라</option><option>보안</option><option>품질</option>
+          </select>
+          <span style="margin-left:auto;color:#5c6572;font-size:9.5px;">총 <b style="color:#1b2433;">{{ jobCountText }}</b>개 직무</span>
+        </article>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;">
+          <sc-for list="{{ jobCards }}" as="job" hint-placeholder-count="4">
+            <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:20px;position:relative;">
+              <header style="display:flex;align-items:center;gap:7px;">
+                <span style="font-size:9px;font-weight:700;color:#14508c;letter-spacing:.5px;">{{ job.id }}</span>
+                <span style="font-size:9px;font-weight:700;border-radius:4px;padding:4px 8px;background:#eef2f8;color:#14508c;">{{ job.group }}</span>
+                <button onClick="{{ job.onEdit }}" style="border:0;background:transparent;color:#8b93a1;margin-left:auto;">•••</button>
+              </header>
+              <h2 style="font-size:17px;margin:15px 0 7px;font-weight:700;">{{ job.name }}</h2>
+              <p style="min-height:42px;margin:0 0 15px;color:#5c6572;font-size:10.5px;line-height:1.65;">{{ job.purpose }}</p>
+              <dl style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 14px;">
+                <div style="background:#f1f3f6;border-radius:5px;padding:9px;"><dt style="font-size:8px;color:#8b93a1;margin:0;">재직 인원</dt><dd style="margin:2px 0 0;font-size:10px;font-weight:700;">{{ job.people }}명</dd></div>
+                <div style="background:#f1f3f6;border-radius:5px;padding:9px;"><dt style="font-size:8px;color:#8b93a1;margin:0;">최고 Level</dt><dd style="margin:2px 0 0;font-size:10px;font-weight:700;">Lv.{{ job.level }}</dd></div>
+                <div style="background:#f1f3f6;border-radius:5px;padding:9px;"><dt style="font-size:8px;color:#8b93a1;margin:0;">최종 개정</dt><dd style="margin:2px 0 0;font-size:10px;font-weight:700;">{{ job.updated }}</dd></div>
+              </dl>
+              <div style="display:flex;flex-wrap:wrap;gap:5px;">
+                <sc-for list="{{ job.skills }}" as="skill" hint-placeholder-count="4"><span style="padding:4px 8px;border-radius:4px;background:#eef2f8;color:#245fae;font-size:8.5px;font-weight:600;">{{ skill }}</span></sc-for>
+              </div>
+              <footer style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #d9dee6;margin-top:15px;padding-top:12px;font-size:8.5px;color:#8b93a1;">
+                <span>추천 자격 {{ job.certCount }}개</span>
+                <button onClick="{{ job.onView }}" style="border:0;background:transparent;color:#14508c;font-size:9.5px;font-weight:700;">정의서 보기 →</button>
+              </footer>
+            </article>
+          </sc-for>
+        </div>
+      </section>
+
+      <!-- ============ SECTION: MULTI ============ -->
+      <section id="sec-multi" data-jump data-screen-label="다면역량진단">
+        <div style="font-size:11px;color:#8b93a1;margin-bottom:10px;">e-HR <span style="margin:0 6px;">›</span> 평가관리 <span style="margin:0 6px;">›</span> 다면역량진단</div>
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:16px;">
+          <div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">MULTI-RATER REVIEW</p><h1 style="font-size:22px;line-height:1.2;margin:4px 0 6px;letter-spacing:-.5px;font-weight:700;">다면역량진단</h1><p style="margin:0;color:#5c6572;font-size:12px;">상사·동료·본인의 관점으로 행동역량을 진단하고 성장 피드백을 남깁니다.</p></div>
+          <span style="display:flex;align-items:center;gap:7px;border:1px solid #b9d0f3;background:#eef2f8;color:#14508c;border-radius:4px;padding:7px 12px;font-size:10px;font-weight:700;"><i style="width:6px;height:6px;border-radius:50%;background:#0f7a5e;display:inline-block;"></i>2026년 정기진단 · D-8</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px;">
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:15px 17px;"><span style="font-size:9px;color:#5c6572;">전체 대상</span><strong style="display:block;font-size:20px;color:#0a2f6b;margin:4px 0;">128명</strong><small style="font-size:8.5px;color:#8b93a1;">평가자 312명</small></article>
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:15px 17px;"><span style="font-size:9px;color:#5c6572;">제출 완료</span><strong style="display:block;font-size:20px;color:#0a2f6b;margin:4px 0;">74%</strong><small style="font-size:8.5px;color:#8b93a1;">231 / 312명</small></article>
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:15px 17px;"><span style="font-size:9px;color:#5c6572;">내 평가 과제</span><strong style="display:block;font-size:20px;color:#0a2f6b;margin:4px 0;">4건</strong><small style="font-size:8.5px;color:#8b93a1;">완료 2 · 진행 1</small></article>
+          <article style="background:#fff;border-top:3px solid #b23b2e;border-left:1px solid #d9dee6;border-right:1px solid #d9dee6;border-bottom:1px solid #d9dee6;border-radius:6px;padding:15px 17px;"><span style="font-size:9px;color:#5c6572;">미제출</span><strong style="display:block;font-size:20px;color:#b23b2e;margin:4px 0;">81건</strong><small style="font-size:8.5px;color:#8b93a1;">리마인드 필요</small></article>
+        </div>
+        <div style="display:grid;grid-template-columns:300px minmax(0,1fr);gap:14px;align-items:start;">
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:20px;">
+            <div style="display:flex;justify-content:space-between;gap:12px;margin-bottom:18px;"><div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">MY ASSIGNMENTS</p><h2 style="font-size:15.5px;margin:3px 0 0;font-weight:700;">나의 평가 과제</h2></div><span style="font-size:9px;font-weight:700;border-radius:4px;padding:4px 8px;background:#eef2f8;color:#14508c;white-space:nowrap;height:fit-content;">4명</span></div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <button style="border:1px solid #cfe0fa;background:#eef2f8;border-radius:5px;padding:10px;display:grid;grid-template-columns:40px 1fr auto;align-items:center;text-align:left;color:#1b2433;"><i style="font-style:normal;font-size:8px;background:#e8f5f0;color:#0f7a5e;border-radius:4px;padding:4px;text-align:center;">완료</i><span style="display:flex;flex-direction:column;padding-left:8px;"><b style="font-size:10px;">직원 A</b><small style="font-size:8px;color:#8b93a1;">동료 · QA</small></span><em style="font-size:8px;font-style:normal;color:#14508c;">100%</em></button>
+              <button style="border:1px solid transparent;background:transparent;border-radius:5px;padding:10px;display:grid;grid-template-columns:40px 1fr auto;align-items:center;text-align:left;color:#1b2433;"><i style="font-style:normal;font-size:8px;background:#e8f5f0;color:#0f7a5e;border-radius:4px;padding:4px;text-align:center;">완료</i><span style="display:flex;flex-direction:column;padding-left:8px;"><b style="font-size:10px;">직원 C</b><small style="font-size:8px;color:#8b93a1;">동료 · 보안컨설팅</small></span><em style="font-size:8px;font-style:normal;color:#14508c;">100%</em></button>
+              <button style="border:1px solid transparent;background:transparent;border-radius:5px;padding:10px;display:grid;grid-template-columns:40px 1fr auto;align-items:center;text-align:left;color:#1b2433;"><i style="font-style:normal;font-size:8px;background:#eef2f8;color:#14508c;border-radius:4px;padding:4px;text-align:center;">진행</i><span style="display:flex;flex-direction:column;padding-left:8px;"><b style="font-size:10px;">직원 D</b><small style="font-size:8px;color:#8b93a1;">협업 · TA</small></span><em style="font-size:8px;font-style:normal;color:#14508c;">{{ multiProgressText }}</em></button>
+              <button style="border:1px solid transparent;background:transparent;border-radius:5px;padding:10px;display:grid;grid-template-columns:40px 1fr auto;align-items:center;text-align:left;color:#1b2433;"><i style="font-style:normal;font-size:8px;background:#f1f3f6;color:#8b93a1;border-radius:4px;padding:4px;text-align:center;">대기</i><span style="display:flex;flex-direction:column;padding-left:8px;"><b style="font-size:10px;">직원 E</b><small style="font-size:8px;color:#8b93a1;">협업 · Application Engineering</small></span><em style="font-size:8px;font-style:normal;color:#14508c;">0%</em></button>
+            </div>
+          </article>
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:20px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #d9dee6;padding-bottom:15px;">
+              <div style="display:flex;align-items:center;gap:11px;">
+                <span style="width:38px;height:38px;display:grid;place-items:center;border-radius:6px;background:#eef2f8;color:#14508c;font-weight:800;">D</span>
+                <div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">PEER REVIEW</p><h2 style="margin:2px 0;font-size:14.5px;font-weight:700;">직원 D · 행동역량 진단</h2><small style="font-size:8.5px;color:#8b93a1;">응답은 익명으로 집계되며 성장 목적으로만 활용됩니다.</small></div>
+              </div>
+              <strong style="font-size:13px;color:#0a2f6b;">{{ multiProgressCount }}</strong>
+            </div>
+            <div>
+              <sc-for list="{{ multiQuestions }}" as="q" hint-placeholder-count="6">
+                <div style="padding:16px 0;border-bottom:1px solid #d9dee6;">
+                  <div style="display:flex;gap:9px;"><span style="font-size:9px;color:#14508c;font-weight:800;">{{ q.num }}</span><p style="margin:0;font-size:10.5px;font-weight:600;">{{ q.label }}</p></div>
+                  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:12px 0 0 25px;">
+                    <sc-for list="{{ q.options }}" as="opt" hint-placeholder-count="5">
+                      <button onClick="{{ opt.onClick }}" style="{{ opt.btnStyle }}">{{ opt.value }}<small style="display:block;font-size:7px;font-weight:500;">{{ opt.label }}</small></button>
+                    </sc-for>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+            <label style="display:block;font-size:9px;color:#5c6572;margin-top:16px;">종합 피드백
+              <textarea onInput="{{ handlers.setMultiComment }}" value="{{ state.multiComment }}" placeholder="강점과 성장에 도움이 될 구체적인 행동 피드백을 작성해주세요." style="display:block;width:100%;min-height:74px;margin-top:6px;border:1px solid #d9dee6;border-radius:5px;padding:10px;background:#fff;color:#1b2433;resize:vertical;"></textarea>
+            </label>
+            <div style="display:flex;justify-content:flex-end;align-items:center;gap:8px;margin-top:16px;">
+              <button onClick="{{ handlers.multiSave }}" style="height:34px;border:1px solid #d9dee6;background:#fff;color:#5c6572;border-radius:4px;padding:0 13px;font-size:10px;font-weight:700;">임시 저장</button>
+              <button onClick="{{ handlers.multiSubmit }}" style="{{ multiSubmitBtnStyle }}">{{ multiSubmitLabel }}</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ SECTION: MBO PERFORMANCE ============ -->
+      <section id="sec-tech" data-jump data-screen-label=" 성과평가">
+        <div style="font-size:11px;color:#8b93a1;margin-bottom:10px;">e-HR <span style="margin:0 6px;">›</span> 평가관리 <span style="margin:0 6px;">›</span> 성과평가</div>
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:16px;">
+          <div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;">PERFORMANCE MANAGEMENT</p><h1 style="font-size:22px;line-height:1.2;margin:4px 0 6px;letter-spacing:-.5px;font-weight:700;"> 성과평가 대시보드</h1><p style="margin:0;color:#5c6572;font-size:12px;">1,000명 조직의 목표 수립부터 평가·조정·확정까지 한 화면에서 관리합니다.</p></div>
+          <div style="display:flex;gap:8px;"><button onClick="{{ handlers.techTemplate }}" style="height:34px;border:1px solid #d9dee6;background:#fff;color:#5c6572;border-radius:4px;padding:0 13px;font-size:10px;font-weight:700;">현황 다운로드</button><button onClick="{{ handlers.openTechConfig }}" style="height:34px;border:0;background:#0a2f6b;color:#fff;border-radius:4px;padding:0 15px;font-size:10px;font-weight:700;">평가 운영 설정</button></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:12px 14px;margin-bottom:14px;">
+          <select style="height:32px;border:1px solid #d9dee6;border-radius:4px;background:#fff;color:#1b2433;padding:0 28px 0 9px;font-size:9.5px;"><option>2026년</option><option>2025년</option></select><select style="height:32px;border:1px solid #d9dee6;border-radius:4px;background:#fff;color:#1b2433;padding:0 28px 0 9px;font-size:9.5px;"><option>상반기 정기평가</option><option>하반기 정기평가</option></select><select style="height:32px;border:1px solid #d9dee6;border-radius:4px;background:#fff;color:#1b2433;padding:0 28px 0 9px;font-size:9.5px;"><option>전사 · 1,000명</option><option>디지털사업그룹 · 284명</option><option>ICT서비스그룹 · 316명</option><option>경영지원그룹 · 178명</option></select><span style="margin-left:auto;font-size:9px;color:#5c6572;">데이터 기준 2026.06.24 18:00</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:14px;">
+          <article style="background:#0a2f6b;color:#fff;border-radius:6px;padding:15px 16px;"><span style="font-size:8px;color:#b7cbea;">평가 대상</span><strong style="display:block;font-size:23px;margin:4px 0;">1,000명</strong><small style="font-size:8px;color:#9fb9df;">관리자 86명 포함</small></article>
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:15px 16px;"><span style="font-size:8px;color:#8b93a1;">목표 수립 완료</span><strong style="display:block;font-size:23px;color:#0a2f6b;margin:4px 0;">98.4%</strong><small style="font-size:8px;color:#b23b2e;">미완료 16명</small></article>
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:15px 16px;"><span style="font-size:8px;color:#8b93a1;">평가 제출률</span><strong style="display:block;font-size:23px;color:#0a2f6b;margin:4px 0;">87.6%</strong><small style="font-size:8px;color:#0f7a5e;">전일 대비 +4.2%p</small></article>
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:15px 16px;"><span style="font-size:8px;color:#8b93a1;">평균 목표 달성률</span><strong style="display:block;font-size:23px;color:#0a2f6b;margin:4px 0;">103.2%</strong><small style="font-size:8px;color:#5c6572;">전년 101.8%</small></article>
+          <article style="background:#fff;border-top:3px solid #b23b2e;border-left:1px solid #d9dee6;border-right:1px solid #d9dee6;border-bottom:1px solid #d9dee6;border-radius:6px;padding:13px 16px;"><span style="font-size:8px;color:#8b93a1;">조정 검토 대상</span><strong style="display:block;font-size:23px;color:#b23b2e;margin:4px 0;">42명</strong><small style="font-size:8px;color:#5c6572;">편차·상향 집중 기준</small></article>
+        </div>
+        <div style="display:grid;grid-template-columns:1.3fr .9fr;gap:14px;margin-bottom:14px;">
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:19px 20px;"><div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:18px;"><div><p style="margin:0;color:#14508c;font-size:9px;font-weight:700;letter-spacing:1px;">ORGANIZATION PROGRESS</p><h2 style="font-size:15.5px;margin:3px 0 0;">조직별 평가 진행 현황</h2></div><span style="font-size:8px;color:#8b93a1;">제출률 / 목표 달성률</span></div>
+            <div style="display:grid;gap:13px;font-size:9px;">
+              <div style="display:grid;grid-template-columns:110px 1fr 86px;align-items:center;gap:10px;"><b>디지털사업그룹</b><i style="height:8px;background:#edf0f4;border-radius:5px;overflow:hidden;"><em style="display:block;width:94%;height:100%;background:#14508c;"></em></i><span style="text-align:right;">94% · <b>108.4%</b></span></div>
+              <div style="display:grid;grid-template-columns:110px 1fr 86px;align-items:center;gap:10px;"><b>ICT서비스그룹</b><i style="height:8px;background:#edf0f4;border-radius:5px;overflow:hidden;"><em style="display:block;width:89%;height:100%;background:#14508c;"></em></i><span style="text-align:right;">89% · <b>102.1%</b></span></div>
+              <div style="display:grid;grid-template-columns:110px 1fr 86px;align-items:center;gap:10px;"><b>금융플랫폼그룹</b><i style="height:8px;background:#edf0f4;border-radius:5px;overflow:hidden;"><em style="display:block;width:86%;height:100%;background:#14508c;"></em></i><span style="text-align:right;">86% · <b>104.7%</b></span></div>
+              <div style="display:grid;grid-template-columns:110px 1fr 86px;align-items:center;gap:10px;"><b>경영지원그룹</b><i style="height:8px;background:#edf0f4;border-radius:5px;overflow:hidden;"><em style="display:block;width:78%;height:100%;background:#a97324;"></em></i><span style="text-align:right;">78% · <b>96.8%</b></span></div>
+              <div style="display:grid;grid-template-columns:110px 1fr 86px;align-items:center;gap:10px;"><b>리스크·준법그룹</b><i style="height:8px;background:#edf0f4;border-radius:5px;overflow:hidden;"><em style="display:block;width:91%;height:100%;background:#14508c;"></em></i><span style="text-align:right;">91% · <b>99.5%</b></span></div>
+            </div>
+          </article>
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:19px 20px;"><div><p style="margin:0;color:#14508c;font-size:9px;font-weight:700;letter-spacing:1px;">RATING DISTRIBUTION</p><h2 style="font-size:15.5px;margin:3px 0 18px;">예상 등급 분포</h2></div><div style="display:flex;align-items:flex-end;justify-content:space-around;height:112px;border-bottom:1px solid #d9dee6;padding:0 4px;"><span style="width:13%;height:18%;background:#0a2f6b;"></span><span style="width:13%;height:48%;background:#14508c;"></span><span style="width:13%;height:100%;background:#3977b7;"></span><span style="width:13%;height:56%;background:#80a8d2;"></span><span style="width:13%;height:14%;background:#b8cbe0;"></span></div><div style="display:flex;justify-content:space-around;font-size:8px;color:#5c6572;margin-top:7px;"><span>S<br><b>5%</b></span><span>A<br><b>20%</b></span><span>B<br><b>50%</b></span><span>C<br><b>20%</b></span><span>D<br><b>5%</b></span></div></article>
+        </div>
+        <div style="display:grid;grid-template-columns:1.35fr .85fr;gap:14px;">
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:18px 20px;"><div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:13px;"><div><p style="margin:0;color:#14508c;font-size:9px;font-weight:700;letter-spacing:1px;">CALIBRATION WATCHLIST</p><h2 style="font-size:15.5px;margin:3px 0 0;">평가 조정 검토 대상</h2></div><button onClick="{{ handlers.openQuestionAdd }}" style="border:0;background:transparent;color:#14508c;font-size:9px;font-weight:700;">전체 42명 보기</button></div><div style="overflow-x:auto;"><table style="font-size:9px;white-space:nowrap;"><thead><tr><th>직원</th><th>조직</th><th>목표 달성률</th><th>1차 평가</th><th>조정 사유</th><th>상태</th></tr></thead><tbody><tr><td><b>직원 A</b></td><td>디지털사업그룹</td><td>138%</td><td>A</td><td>조직 평균 +24%p</td><td><span style="color:#b23b2e;">검토 필요</span></td></tr><tr><td><b>직원 B</b></td><td>ICT서비스그룹</td><td>112%</td><td>S</td><td>등급 상향 집중</td><td><span style="color:#a97324;">위원회 대기</span></td></tr><tr><td><b>직원 C</b></td><td>경영지원그룹</td><td>74%</td><td>C</td><td>정성목표 근거 미첨부</td><td><span style="color:#14508c;">소명 요청</span></td></tr></tbody></table></div></article>
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:18px 20px;"><div><p style="margin:0;color:#14508c;font-size:9px;font-weight:700;letter-spacing:1px;">ACTION REQUIRED</p><h2 style="font-size:15.5px;margin:3px 0 14px;">마감 전 조치사항</h2></div><div style="display:grid;gap:8px;"><button onClick="{{ handlers.remind }}" style="display:flex;justify-content:space-between;border:1px solid #f0d8d3;background:#fff8f6;border-radius:5px;padding:10px;color:#1b2433;font-size:9px;"><span>평가 미제출자 알림</span><b style="color:#b23b2e;">124명 ›</b></button><button onClick="{{ handlers.openQuestionAdd }}" style="display:flex;justify-content:space-between;border:1px solid #eadfc8;background:#fffaf0;border-radius:5px;padding:10px;color:#1b2433;font-size:9px;"><span>목표 근거자료 보완</span><b style="color:#a97324;">37명 ›</b></button><button onClick="{{ handlers.openTechConfig }}" style="display:flex;justify-content:space-between;border:1px solid #d9dee6;background:#f7f9fc;border-radius:5px;padding:10px;color:#1b2433;font-size:9px;"><span>조직장 평가 미확정</span><b style="color:#14508c;">11개 조직 ›</b></button></div></article>
+        </div>
+      </section>
+
+
+      <!-- ============ SECTION: RESULTS ============ -->
+      <section id="sec-results" data-jump data-screen-label="평가 결과">
+        <div style="font-size:11px;color:#8b93a1;margin-bottom:10px;">e-HR <span style="margin:0 6px;">›</span> 평가관리 <span style="margin:0 6px;">›</span> 평가 결과</div>
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:16px;">
+          <div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">ASSESSMENT RESULT</p><h1 style="font-size:22px;line-height:1.2;margin:4px 0 6px;letter-spacing:-.5px;font-weight:700;">평가 결과</h1><p style="margin:0;color:#5c6572;font-size:12px;">MBO 성과 결과와 평가 요소별 가중치를 시뮬레이션하고 최종 결과를 확정합니다.</p></div>
+          <div style="display:flex;gap:8px;">
+            <button onClick="{{ handlers.resultExport }}" style="height:34px;border:1px solid #d9dee6;background:#fff;color:#5c6572;border-radius:4px;padding:0 13px;font-size:10px;font-weight:700;">결과 다운로드</button>
+            <button onClick="{{ handlers.openFinalize }}" style="height:34px;border:0;background:#0a2f6b;color:#fff;border-radius:4px;padding:0 15px;font-size:10px;font-weight:700;">결과 확정</button>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1.25fr;gap:14px;margin-bottom:14px;">
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:20px;">
+            <div style="display:flex;justify-content:space-between;gap:12px;margin-bottom:14px;"><div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">WEIGHT SIMULATION</p><h2 style="font-size:15.5px;margin:3px 0 0;font-weight:700;">평가 가중치</h2></div><span style="{{ weightTotalStyle }}">{{ weightTotalText }}</span></div>
+            <label style="display:block;margin:15px 0;"><span style="display:flex;justify-content:space-between;font-size:9px;color:#5c6572;">다면역량진단<b style="color:#14508c;">{{ weightLabels.multi }}</b></span><input onChange="{{ handlers.setWeightMulti }}" value="{{ state.weights.multi }}" type="range" min="0" max="100" style="width:100%;accent-color:#14508c;"></label>
+            <label style="display:block;margin:15px 0;"><span style="display:flex;justify-content:space-between;font-size:9px;color:#5c6572;">성과평가<b style="color:#14508c;">{{ weightLabels.tech }}</b></span><input onChange="{{ handlers.setWeightTech }}" value="{{ state.weights.tech }}" type="range" min="0" max="100" style="width:100%;accent-color:#14508c;"></label>
+            <label style="display:block;margin:15px 0;"><span style="display:flex;justify-content:space-between;font-size:9px;color:#5c6572;">조직평가<b style="color:#14508c;">{{ weightLabels.industry }}</b></span><input onChange="{{ handlers.setWeightIndustry }}" value="{{ state.weights.industry }}" type="range" min="0" max="100" style="width:100%;accent-color:#14508c;"></label>
+            <button onClick="{{ handlers.recalculate }}" style="width:100%;margin-top:10px;border:0;background:#0a2f6b;color:#fff;border-radius:4px;padding:9px;font-size:10.5px;font-weight:700;">가중치 적용·재계산</button>
+            <p style="font-size:8.5px;color:#8b93a1;background:#f1f3f6;padding:9px;border-radius:5px;margin-top:12px;">가중치 변경은 화면 시뮬레이션에만 반영됩니다. 결과 확정 전까지 원본 점수는 유지됩니다.</p>
+          </article>
+          <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:20px;display:flex;flex-direction:column;">
+            <div style="display:flex;justify-content:space-between;gap:12px;margin-bottom:14px;"><div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">RESULT SUMMARY</p><h2 style="font-size:15.5px;margin:3px 0 0;font-weight:700;">재산정 영향</h2></div><span style="font-size:9px;font-weight:700;border-radius:4px;padding:4px 8px;background:#eef2f8;color:#14508c;white-space:nowrap;height:fit-content;">8명 표본</span></div>
+            <div style="display:flex;flex-direction:column;align-items:center;margin:auto;">
+              <strong style="font-size:44px;line-height:1;color:#0a2f6b;letter-spacing:-1.5px;">{{ resultAverageText }}</strong>
+              <span style="font-size:9px;color:#8b93a1;">평균 최종점수</span>
+              <em style="font-style:normal;color:#0f7a5e;font-size:9px;">{{ resultDeltaText }}</em>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:18px;">
+              <div style="background:#f1f3f6;padding:9px;border-radius:5px;text-align:center;"><span style="display:block;font-size:7px;color:#8b93a1;">Level 상승</span><b style="font-size:10px;">{{ levelUpsText }}</b></div>
+              <div style="background:#f1f3f6;padding:9px;border-radius:5px;text-align:center;"><span style="display:block;font-size:7px;color:#8b93a1;">Level 하락</span><b style="font-size:10px;">0명</b></div>
+              <div style="background:#f1f3f6;padding:9px;border-radius:5px;text-align:center;"><span style="display:block;font-size:7px;color:#8b93a1;">최대 변동</span><b style="font-size:10px;">{{ maxChangeText }}</b></div>
+            </div>
+          </article>
+        </div>
+        <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:18px 20px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:15px;">
+            <div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">FINAL SCORE</p><h2 style="font-size:15.5px;margin:3px 0 0;font-weight:700;">개인별 평가 결과</h2></div>
+            <input onInput="{{ handlers.setResultSearch }}" value="{{ state.resultSearch }}" type="search" placeholder="성명 또는 직무 검색" style="border:1px solid #d9dee6;background:#fff;color:#1b2433;height:34px;border-radius:4px;padding:0 10px;font-size:10.5px;">
+          </div>
+          <div style="overflow-x:auto;">
+            <table style="font-size:10px;white-space:nowrap;">
+              <thead><tr>
+                <th style="text-align:left;color:#8b93a1;font-size:8.5px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">직원</th>
+                <th style="text-align:left;color:#8b93a1;font-size:8.5px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">직무</th>
+                <th style="text-align:left;color:#8b93a1;font-size:8.5px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">다면진단</th>
+                <th style="text-align:left;color:#8b93a1;font-size:8.5px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">성과평가</th>
+                <th style="text-align:left;color:#8b93a1;font-size:8.5px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">산업진단</th>
+                <th style="text-align:left;color:#8b93a1;font-size:8.5px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">최종 점수</th>
+                <th style="text-align:left;color:#8b93a1;font-size:8.5px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">Level</th>
+                <th style="text-align:left;color:#8b93a1;font-size:8.5px;text-transform:uppercase;border-bottom:1px solid #d9dee6;padding:8px 10px;">상태</th>
+                <th style="border-bottom:1px solid #d9dee6;padding:8px 10px;"></th>
+              </tr></thead>
+              <tbody>
+                <sc-for list="{{ resultRows }}" as="r" hint-placeholder-count="8">
+                  <tr>
+                    <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;"><span style="display:flex;align-items:center;gap:8px;"><i style="width:24px;height:24px;border-radius:5px;background:#eef2f8;color:#14508c;display:grid;place-items:center;font-style:normal;font-weight:700;font-size:9px;">{{ r.initial }}</i><b>{{ r.name }}</b></span></td>
+                    <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;">{{ r.job }}</td>
+                    <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;">{{ r.multi }}</td>
+                    <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;">{{ r.tech }}</td>
+                    <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;">{{ r.industry }}</td>
+                    <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;"><b style="font-size:13px;color:#0a2f6b;">{{ r.final }}</b></td>
+                    <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;"><span style="background:#eef2f8;color:#14508c;border-radius:4px;padding:3px 7px;font-weight:700;">Lv.{{ r.level }}</span></td>
+                    <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;"><span style="{{ r.statusStyle }}">{{ r.status }}</span></td>
+                    <td style="padding:9px 10px;border-bottom:1px solid #d9dee6;"><button onClick="{{ r.onDetail }}" style="border:1px solid #d9dee6;border-radius:4px;padding:5px 8px;background:#fff;color:#1b2433;font-size:9px;">상세</button></td>
+                  </tr>
+                </sc-for>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <!-- ============ SECTION: LEARNING ============ -->
+      <section id="sec-learning" data-jump data-screen-label="추천 교육·자격">
+        <div style="font-size:11px;color:#8b93a1;margin-bottom:10px;">e-HR <span style="margin:0 6px;">›</span> 성장지원 <span style="margin:0 6px;">›</span> 추천 교육·자격</div>
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:16px;">
+          <div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">GROWTH PATH</p><h1 style="font-size:22px;line-height:1.2;margin:4px 0 6px;letter-spacing:-.5px;font-weight:700;">추천 교육·자격</h1><p style="margin:0;color:#5c6572;font-size:12px;">직무 Gap과 성장 목표에 맞는 학습·자격 로드맵을 실행합니다.</p></div>
+          <button onClick="{{ handlers.planView }}" style="height:34px;border:1px solid #d9dee6;background:#fff;color:#5c6572;border-radius:4px;padding:0 13px;font-size:10px;font-weight:700;">나의 성장 계획</button>
+        </div>
+        <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:20px 22px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px;">
+          <div style="display:flex;gap:14px;align-items:center;">
+            <span style="width:44px;height:44px;border-radius:6px;display:grid;place-items:center;background:#0a2f6b;color:#fff;font-size:20px;">↗</span>
+            <div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">NEXT LEVEL PATH</p><h2 style="margin:4px 0;font-size:17px;font-weight:700;">Lv.6까지 6점이 남았습니다</h2><p style="font-size:9.5px;color:#5c6572;margin:0;">필수 교육 1개와 고급 자격 1개를 완료하면 차기 배치에서 승급 가능성이 높습니다.</p></div>
+          </div>
+          <div style="width:260px;">
+            <span style="font-size:9px;color:#5c6572;"><b style="font-size:16px;color:#0a2f6b;">70</b> / 80점</span>
+            <i style="display:block;height:7px;background:#d9dee6;border-radius:4px;overflow:hidden;margin:5px 0;"><b style="display:block;height:100%;width:70%;background:#14508c;"></b></i>
+            <small style="font-size:8px;color:#0f7a5e;">예정 학습 반영 시 79점</small>
+          </div>
+        </article>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+          <div style="display:flex;gap:5px;">
+            <sc-for list="{{ learningFilters }}" as="f" hint-placeholder-count="4"><button onClick="{{ f.onClick }}" style="{{ f.btnStyle }}">{{ f.label }}</button></sc-for>
+          </div>
+          <select style="border:1px solid #d9dee6;border-radius:4px;background:#fff;color:#1b2433;padding:6px 10px;font-size:9.5px;"><option>적합도순</option><option>학습시간순</option><option>포인트순</option></select>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px;">
+          <sc-for list="{{ courseCards }}" as="c" hint-placeholder-count="4">
+            <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:15px;">
+              <header style="display:flex;justify-content:space-between;align-items:center;"><span style="{{ c.typeStyle }}">{{ c.type }}</span><strong style="font-size:8px;color:#0f7a5e;">{{ c.match }}% match</strong></header>
+              <div style="height:70px;margin:11px 0;border-radius:5px;display:grid;place-items:center;background:#0a2f6b;color:rgba(255,255,255,.8);font-size:10px;font-weight:800;letter-spacing:2px;">{{ c.artLabel }}</div>
+              <h2 style="font-size:11.5px;min-height:34px;margin:0;font-weight:700;">{{ c.title }}</h2>
+              <p style="font-size:8px;color:#8b93a1;">{{ c.meta }}</p>
+              <div style="background:#f1f3f6;border-radius:4px;padding:7px;font-size:8px;color:#5c6572;">{{ c.reason }}</div>
+              <footer style="display:grid;grid-template-columns:auto 1fr;gap:6px;margin-top:11px;">
+                <button onClick="{{ c.onDetail }}" style="height:32px;border:1px solid #d9dee6;background:#fff;color:#5c6572;border-radius:4px;padding:0 9px;font-size:9.5px;font-weight:700;">상세</button>
+                <button onClick="{{ c.onEnroll }}" style="{{ c.enrollStyle }}">{{ c.enrollLabel }}</button>
+              </footer>
+            </article>
+          </sc-for>
+        </div>
+        <article style="background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:20px;">
+          <div style="display:flex;justify-content:space-between;gap:12px;margin-bottom:18px;"><div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">2026 GROWTH ROADMAP</p><h2 style="font-size:15.5px;margin:3px 0 0;font-weight:700;">나의 성장 로드맵</h2></div><span style="font-size:9px;font-weight:700;border-radius:4px;padding:4px 8px;background:#eef2f8;color:#14508c;white-space:nowrap;height:fit-content;">진행률 50%</span></div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);position:relative;">
+            <div style="position:absolute;left:7%;right:7%;top:16px;height:2px;background:#d9dee6;"></div>
+            <div style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;"><i style="z-index:1;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#0f7a5e;border:2px solid #0f7a5e;color:#fff;font-style:normal;font-size:9px;font-weight:800;">✓</i><span style="display:flex;flex-direction:column;margin-top:8px;"><b style="font-size:9px;">다면역량진단 완료</b><small style="font-size:7px;color:#8b93a1;">2026.03 · 38/50점</small></span></div>
+            <div style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;"><i style="z-index:1;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#0f7a5e;border:2px solid #0f7a5e;color:#fff;font-style:normal;font-size:9px;font-weight:800;">✓</i><span style="display:flex;flex-direction:column;margin-top:8px;"><b style="font-size:9px;">정보보안기사 취득</b><small style="font-size:7px;color:#8b93a1;">2026.05 · +4점</small></span></div>
+            <div style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;"><i style="z-index:1;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#14508c;border:2px solid #14508c;color:#fff;font-style:normal;font-size:9px;font-weight:800;">3</i><span style="display:flex;flex-direction:column;margin-top:8px;"><b style="font-size:9px;">AWS DevOps 과정</b><small style="font-size:7px;color:#8b93a1;">2026.07 예정 · +5점</small></span></div>
+            <div style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;"><i style="z-index:1;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#fff;border:2px solid #d9dee6;color:#1b2433;font-style:normal;font-size:9px;font-weight:800;">4</i><span style="display:flex;flex-direction:column;margin-top:8px;"><b style="font-size:9px;">ISTQB Advanced</b><small style="font-size:7px;color:#8b93a1;">2026.09 목표 · +4점</small></span></div>
+          </div>
+        </article>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- TOAST -->
+  <sc-if value="{{ toastVisible }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;right:24px;bottom:24px;background:#0a2f6b;color:#fff;padding:11px 16px;border-radius:5px;font-size:11px;box-shadow:0 8px 20px rgba(0,0,0,.18);z-index:80;">{{ state.toast }}</div>
+  </sc-if>
+
+  <!-- MODAL -->
+  <sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;inset:0;z-index:100;display:grid;place-items:center;">
+      <div onClick="{{ handlers.closeModal }}" style="position:absolute;inset:0;background:rgba(8,18,36,.45);"></div>
+      <section role="dialog" style="position:relative;width:min(620px,calc(100vw - 28px));max-height:86vh;overflow:auto;background:#fff;color:#1b2433;border:1px solid #d9dee6;border-radius:8px;box-shadow:0 20px 50px rgba(0,0,0,.22);">
+        <header style="display:flex;justify-content:space-between;align-items:flex-start;padding:19px 21px;border-bottom:1px solid #d9dee6;position:sticky;top:0;background:#fff;z-index:2;">
+          <div><p style="margin:0;color:#14508c;font-size:9.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;">{{ modalEyebrow }}</p><h2 style="font-size:16.5px;margin:2px 0;font-weight:700;">{{ modalTitle }}</h2></div>
+          <button onClick="{{ handlers.closeModal }}" style="width:28px;height:28px;border:1px solid #d9dee6;background:#fff;color:#5c6572;border-radius:5px;font-size:15px;">×</button>
+        </header>
+        <div style="padding:21px;">
+
+          <sc-if value="{{ modalIsMember }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;align-items:center;gap:12px;background:#f1f3f6;border-radius:6px;padding:14px;">
+              <span style="width:42px;height:42px;border-radius:6px;background:#eef2f8;color:#14508c;display:grid;place-items:center;font-weight:800;">{{ modalMember.initial }}</span>
+              <div style="flex:1;"><h3 style="margin:0;font-size:14.5px;">{{ modalMember.name }}</h3><p style="margin:2px 0;color:#5c6572;font-size:9.5px;">{{ modalMember.sub }}</p></div>
+              <strong style="font-size:19px;color:#0a2f6b;">Lv.{{ modalMember.level }}</strong>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0;">
+              <div style="border:1px solid #d9dee6;border-radius:5px;padding:11px;"><span style="font-size:8px;color:#8b93a1;">최종 점수</span><b style="display:block;font-size:15px;color:#0a2f6b;">{{ modalMember.score }}</b></div>
+              <div style="border:1px solid #d9dee6;border-radius:5px;padding:11px;"><span style="font-size:8px;color:#8b93a1;">다면진단</span><b style="display:block;font-size:15px;color:#0a2f6b;">{{ modalMember.multi }}</b></div>
+              <div style="border:1px solid #d9dee6;border-radius:5px;padding:11px;"><span style="font-size:8px;color:#8b93a1;">MBO 성과</span><b style="display:block;font-size:15px;color:#0a2f6b;">{{ modalMember.tech }}</b></div>
+              <div style="border:1px solid #d9dee6;border-radius:5px;padding:11px;"><span style="font-size:8px;color:#8b93a1;">산업진단</span><b style="display:block;font-size:15px;color:#0a2f6b;">{{ modalMember.industry }}</b></div>
+            </div>
+            <h4 style="font-size:10px;margin:16px 0 8px;">최근 변화</h4>
+            <div>
+              <div style="display:flex;gap:9px;padding:8px 0;border-bottom:1px solid #d9dee6;"><i style="width:7px;height:7px;border-radius:50%;background:#14508c;margin-top:5px;flex:0 0 auto;"></i><span style="display:flex;flex-direction:column;"><b style="font-size:9px;">2026년 6월 월말 배치</b><small style="font-size:8px;color:#8b93a1;">{{ modalMember.historyText }}</small></span></div>
+              <div style="display:flex;gap:9px;padding:8px 0;"><i style="width:7px;height:7px;border-radius:50%;background:#14508c;margin-top:5px;flex:0 0 auto;"></i><span style="display:flex;flex-direction:column;"><b style="font-size:9px;">자격·교육 점수 반영</b><small style="font-size:8px;color:#8b93a1;">샘플 학습 이력 기반</small></span></div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ modalIsJobForm }}" hint-placeholder-val="{{ false }}">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+              <label style="font-size:8px;color:#5c6572;font-weight:700;">직무 코드<input onInput="{{ handlers.jobDraftId }}" value="{{ jobDraft.id }}" style="display:block;width:100%;margin-top:5px;border:1px solid #d9dee6;border-radius:5px;background:#fff;color:#1b2433;padding:9px;font-size:10px;"></label>
+              <label style="font-size:8px;color:#5c6572;font-weight:700;">직군<select onChange="{{ handlers.jobDraftGroup }}" value="{{ jobDraft.group }}" style="display:block;width:100%;margin-top:5px;border:1px solid #d9dee6;border-radius:5px;background:#fff;color:#1b2433;padding:9px;font-size:10px;"><option>개발</option><option>인프라</option><option>보안</option><option>품질</option></select></label>
+              <label style="grid-column:1/-1;font-size:8px;color:#5c6572;font-weight:700;">직무명<input onInput="{{ handlers.jobDraftName }}" value="{{ jobDraft.name }}" placeholder="예: Cloud Architect" style="display:block;width:100%;margin-top:5px;border:1px solid #d9dee6;border-radius:5px;background:#fff;color:#1b2433;padding:9px;font-size:10px;"></label>
+              <label style="grid-column:1/-1;font-size:8px;color:#5c6572;font-weight:700;">직무 목적<textarea onInput="{{ handlers.jobDraftPurpose }}" value="{{ jobDraft.purpose }}" style="display:block;width:100%;margin-top:5px;border:1px solid #d9dee6;border-radius:5px;background:#fff;color:#1b2433;padding:9px;min-height:70px;resize:vertical;"></textarea></label>
+              <label style="font-size:8px;color:#5c6572;font-weight:700;">재직 인원<input onInput="{{ handlers.jobDraftPeople }}" value="{{ jobDraft.people }}" type="number" min="0" style="display:block;width:100%;margin-top:5px;border:1px solid #d9dee6;border-radius:5px;background:#fff;color:#1b2433;padding:9px;font-size:10px;"></label>
+              <label style="font-size:8px;color:#5c6572;font-weight:700;">최고 Level<input onInput="{{ handlers.jobDraftLevel }}" value="{{ jobDraft.level }}" type="number" min="1" max="7" style="display:block;width:100%;margin-top:5px;border:1px solid #d9dee6;border-radius:5px;background:#fff;color:#1b2433;padding:9px;font-size:10px;"></label>
+              <label style="grid-column:1/-1;font-size:8px;color:#5c6572;font-weight:700;">핵심 역량 (쉼표 구분)<input onInput="{{ handlers.jobDraftSkills }}" value="{{ jobDraft.skillsText }}" style="display:block;width:100%;margin-top:5px;border:1px solid #d9dee6;border-radius:5px;background:#fff;color:#1b2433;padding:9px;font-size:10px;"></label>
+            </div>
+            <div style="display:flex;justify-content:flex-end;align-items:center;gap:8px;margin-top:16px;">
+              <sc-if value="{{ jobDraftIsEdit }}" hint-placeholder-val="{{ false }}"><button onClick="{{ handlers.jobDelete }}" style="height:34px;border:0;background:#fbeae7;color:#b23b2e;border-radius:4px;padding:0 14px;font-size:10px;font-weight:700;margin-right:auto;">삭제</button></sc-if>
+              <button onClick="{{ handlers.closeModal }}" style="height:34px;border:1px solid #d9dee6;background:#fff;color:#5c6572;border-radius:4px;padding:0 14px;font-size:10px;font-weight:700;">취소</button>
+              <button onClick="{{ handlers.jobSave }}" style="height:34px;border:0;background:#0a2f6b;color:#fff;border-radius:4px;padding:0 16px;font-size:10px;font-weight:700;">저장</button>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ modalIsRule }}" hint-placeholder-val="{{ false }}">
+            <div style="display:grid;gap:7px;">
+              <sc-for list="{{ ruleList }}" as="rule" hint-placeholder-count="7">
+                <label style="display:grid;grid-template-columns:55px 1fr;align-items:center;"><b style="font-size:10px;color:#14508c;">{{ rule.level }}</b><input value="{{ rule.rule }}" style="display:block;width:100%;border:1px solid #d9dee6;border-radius:5px;background:#fff;color:#1b2433;padding:9px;font-size:10px;"></label>
+              </sc-for>
+            </div>
+            <div style="display:flex;justify-content:flex-end;margin-top:16px;"><button onClick="{{ handlers.ruleSave }}" style="height:34px;border:0;background:#0a2f6b;color:#fff;border-radius:4px;padding:0 16px;font-size:10px;font-weight:700;">저장</button></div>
+          </sc-if>
+
+          <sc-if value="{{ modalIsTechConfig }}" hint-placeholder-val="{{ false }}">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+              <label style="font-size:8px;color:#5c6572;font-weight:700;">평가 연도<select style="display:block;width:100%;margin-top:5px;border:1px solid #d9dee6;border-radius:5px;background:#fff;color:#1b2433;padding:9px;font-size:10px;"><option>2026</option><option>2027</option></select></label>
+              <label style="font-size:8px;color:#5c6572;font-weight:700;">회차<input value="2026-01" style="display:block;width:100%;margin-top:5px;border:1px solid #d9dee6;border-radius:5px;background:#fff;color:#1b2433;padding:9px;font-size:10px;"></label>
+              <label style="font-size:8px;color:#5c6572;font-weight:700;">시작일<input type="date" value="2026-06-10" style="display:block;width:100%;margin-top:5px;border:1px solid #d9dee6;border-radius:5px;background:#fff;color:#1b2433;padding:9px;font-size:10px;"></label>
+              <label style="font-size:8px;color:#5c6572;font-weight:700;">종료일<input type="date" value="2026-06-28" style="display:block;width:100%;margin-top:5px;border:1px solid #d9dee6;border-radius:5px;background:#fff;color:#1b2433;padding:9px;font-size:10px;"></label>
+              <label style="grid-column:1/-1;font-size:8px;color:#5c6572;font-weight:700;">대상 직무<input value="개발, 보안, 인프라, IT 트렌드" style="display:block;width:100%;margin-top:5px;border:1px solid #d9dee6;border-radius:5px;background:#fff;color:#1b2433;padding:9px;font-size:10px;"></label>
+              <label style="grid-column:1/-1;font-size:8px;color:#5c6572;font-weight:700;">대상 직급<input value="S1, S2, L, M1, M2" style="display:block;width:100%;margin-top:5px;border:1px solid #d9dee6;border-radius:5px;background:#fff;color:#1b2433;padding:9px;font-size:10px;"></label>
+            </div>
+            <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:16px;"><button onClick="{{ handlers.closeModal }}" style="height:34px;border:1px solid #d9dee6;background:#fff;color:#5c6572;border-radius:4px;padding:0 14px;font-size:10px;font-weight:700;">취소</button><button onClick="{{ handlers.techConfigSave }}" style="height:34px;border:0;background:#0a2f6b;color:#fff;border-radius:4px;padding:0 16px;font-size:10px;font-weight:700;">저장</button></div>
+          </sc-if>
+
+          <sc-if value="{{ modalIsQuestionAdd }}" hint-placeholder-val="{{ false }}">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+              <label style="font-size:8px;color:#5c6572;font-weight:700;">직무 구분<select style="display:block;width:100%;margin-top:5px;border:1px solid #d9dee6;border-radius:5px;background:#fff;color:#1b2433;padding:9px;font-size:10px;"><option>개발</option><option>보안</option><option>인프라</option></select></label>
+              <label style="font-size:8px;color:#5c6572;font-weight:700;">난이도<select style="display:block;width:100%;margin-top:5px;border:1px solid #d9dee6;border-radius:5px;background:#fff;color:#1b2433;padding:9px;font-size:10px;"><option>초급</option><option>중급</option><option>고급</option></select></label>
+              <label style="grid-column:1/-1;font-size:8px;color:#5c6572;font-weight:700;">문항<textarea placeholder="문항 내용을 입력하세요" style="display:block;width:100%;margin-top:5px;border:1px solid #d9dee6;border-radius:5px;background:#fff;color:#1b2433;padding:9px;min-height:60px;resize:vertical;"></textarea></label>
+              <label style="grid-column:1/-1;font-size:8px;color:#5c6572;font-weight:700;">정답 및 해설<textarea placeholder="정답과 해설을 입력하세요" style="display:block;width:100%;margin-top:5px;border:1px solid #d9dee6;border-radius:5px;background:#fff;color:#1b2433;padding:9px;min-height:60px;resize:vertical;"></textarea></label>
+            </div>
+            <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:16px;"><button onClick="{{ handlers.closeModal }}" style="height:34px;border:1px solid #d9dee6;background:#fff;color:#5c6572;border-radius:4px;padding:0 14px;font-size:10px;font-weight:700;">취소</button><button onClick="{{ handlers.questionAddSave }}" style="height:34px;border:0;background:#0a2f6b;color:#fff;border-radius:4px;padding:0 16px;font-size:10px;font-weight:700;">문항 저장</button></div>
+          </sc-if>
+
+          <sc-if value="{{ modalIsFinalize }}" hint-placeholder-val="{{ false }}">
+            <div style="text-align:center;">
+              <span style="width:48px;height:48px;border-radius:50%;display:grid;place-items:center;margin:0 auto;background:#faf1e2;color:#a97324;font-size:20px;font-weight:800;">!</span>
+              <h3 style="font-size:14.5px;">현재 시뮬레이션 결과를 확정할까요?</h3>
+              <p style="font-size:9.5px;color:#5c6572;">확정 후에는 인사관리자만 결과를 재개방할 수 있습니다.</p>
+              <div style="display:flex;justify-content:center;gap:8px;margin-top:14px;"><button onClick="{{ handlers.closeModal }}" style="height:34px;border:1px solid #d9dee6;background:#fff;color:#5c6572;border-radius:4px;padding:0 14px;font-size:10px;font-weight:700;">취소</button><button onClick="{{ handlers.confirmFinalize }}" style="height:34px;border:0;background:#0a2f6b;color:#fff;border-radius:4px;padding:0 16px;font-size:10px;font-weight:700;">결과 확정</button></div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ modalIsCourseDetail }}" hint-placeholder-val="{{ false }}">
+            <span style="font-size:9px;font-weight:700;border-radius:4px;padding:4px 8px;background:#eef2f8;color:#14508c;">추천 과정</span>
+            <h3 style="font-size:15.5px;">{{ modalCourseId }}</h3>
+            <p style="font-size:10px;color:#5c6572;">직무 요구역량과 현재 Gap을 기반으로 추천된 샘플 과정입니다.</p>
+            <div style="display:grid;gap:7px;">
+              <div style="display:flex;justify-content:space-between;background:#f1f3f6;padding:9px;border-radius:5px;"><dt style="font-size:8px;color:#8b93a1;margin:0;">예상 학습시간</dt><dd style="margin:0;font-size:9px;font-weight:700;">24시간</dd></div>
+              <div style="display:flex;justify-content:space-between;background:#f1f3f6;padding:9px;border-radius:5px;"><dt style="font-size:8px;color:#8b93a1;margin:0;">반영 포인트</dt><dd style="margin:0;font-size:9px;font-weight:700;">최대 5점</dd></div>
+              <div style="display:flex;justify-content:space-between;background:#f1f3f6;padding:9px;border-radius:5px;"><dt style="font-size:8px;color:#8b93a1;margin:0;">수료 기준</dt><dd style="margin:0;font-size:9px;font-weight:700;">진도 90% + 평가 70점</dd></div>
+            </div>
+          </sc-if>
+
+        </div>
+      </section>
+    </div>
+  </sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  scoreComponents = [
+    { key: "multi", label: "다면역량진단", score: 38, max: 50, detail: "윤리·전문성·주도성·협업·책임" },
+    { key: "career", label: "경력", score: 16, max: 20, detail: "직급 체류 및 유관 경력" },
+    { key: "degree", label: "학위", score: 5, max: 10, detail: "석사" },
+    { key: "certificate", label: "자격증", score: 9, max: 20, detail: "고급 2 · 초급 1" },
+    { key: "contribution", label: "조직역량기여", score: 2, max: 8, detail: "사내 멘토링 1건" },
+  ];
+  radarData = [
+    { label: "윤리", me: 84, team: 82 }, { label: "업무 전문성", me: 72, team: 78 },
+    { label: "자발적 행동", me: 80, team: 75 }, { label: "변화 추진", me: 68, team: 73 },
+    { label: "소통·협업", me: 88, team: 80 }, { label: "실행·책임", me: 76, team: 79 },
+  ];
+  certificates = [
+    { name: "정보보안기사", grade: "고급", points: 4 },
+    { name: "PMP", grade: "고급", points: 4 },
+    { name: "정보처리기사", grade: "초급", points: 1 },
+  ];
+  educationData = [
+    { name: "SW Test Manager", points: 5, completed: true },
+    { name: "SP인증 SW교육", points: 5, completed: true },
+    { name: "AWS DevOps", points: 2, completed: false },
+  ];
+  departments = ["품질혁신팀", "인사팀", "재무팀", "공통지원팀", "공통플랫폼팀", "AX운영팀", "클라우드운영팀", "보안컨설팅팀", "인프라SRE팀", "뱅킹 IS팀"];
+  membersInit = [
+    { id: 1, name: "직원 A", department: "품질혁신팀", job: "QA", grade: "S2", level: 6, score: 81, previous: 76, multi: 86, tech: 83, industry: 78, cert: 12, status: "우수", watch: false },
+    { id: 2, name: "직원 B", department: "품질혁신팀", job: "QA", grade: "S2", level: 5, score: 70, previous: 67, multi: 76, tech: 72, industry: 66, cert: 9, status: "적정", watch: false },
+    { id: 3, name: "직원 C", department: "보안컨설팅팀", job: "보안컨설팅", grade: "S2", level: 5, score: 68, previous: 71, multi: 72, tech: 74, industry: 61, cert: 8, status: "관찰", watch: true },
+    { id: 4, name: "직원 D", department: "품질혁신팀", job: "TA", grade: "S1", level: 4, score: 62, previous: 58, multi: 69, tech: 60, industry: 57, cert: 6, status: "적정", watch: false },
+    { id: 5, name: "직원 E", department: "인프라SRE팀", job: "Application Engineering", grade: "S1", level: 3, score: 56, previous: 61, multi: 64, tech: 51, industry: 53, cert: 4, status: "관찰", watch: true },
+    { id: 6, name: "직원 F", department: "클라우드운영팀", job: "클라우드 운영", grade: "L", level: 6, score: 84, previous: 79, multi: 88, tech: 87, industry: 77, cert: 14, status: "전문가", watch: false },
+    { id: 7, name: "직원 G", department: "보안컨설팅팀", job: "모의해킹", grade: "M2", level: 3, score: 57, previous: 63, multi: 66, tech: 58, industry: 45, cert: 7, status: "미응시", watch: true },
+    { id: 8, name: "직원 H", department: "인프라SRE팀", job: "DBA", grade: "S2", level: 5, score: 73, previous: 70, multi: 75, tech: 82, industry: 62, cert: 11, status: "적정", watch: false },
+  ];
+  jobsInit = [
+    { id: "R0001", group: "개발", name: "Application Engineering", purpose: "비즈니스 요구를 안정적인 디지털 서비스로 구현하고 End-to-End 품질을 책임집니다.", people: 42, level: 7, skills: ["Java/Spring", "API 설계", "클라우드", "DevOps"], certs: ["정보처리기사", "AWS SAA", "PMP"], updated: "2026-05-28" },
+    { id: "R0002", group: "인프라", name: "DBA", purpose: "DBMS의 안정적 운영과 성능 최적화를 통해 서비스 신뢰성과 가용성을 확보합니다.", people: 18, level: 7, skills: ["Oracle/MSSQL", "성능 튜닝", "백업·복구", "보안"], certs: ["OCP", "SQLP", "DAsP"], updated: "2026-06-11" },
+    { id: "R0003", group: "보안", name: "보안컨설팅", purpose: "보안 위험을 진단하고 규제·인증 요구에 맞는 개선 체계를 설계합니다.", people: 26, level: 7, skills: ["ISMS-P", "위험평가", "컴플라이언스", "보고서"], certs: ["CISSP", "ISMS-P", "정보보안기사"], updated: "2026-04-19" },
+    { id: "R0004", group: "품질", name: "QA", purpose: "품질 기준과 테스트 전략을 수립하고 제품 릴리스의 신뢰성을 보증합니다.", people: 31, level: 6, skills: ["테스트 설계", "자동화", "품질 지표", "요구공학"], certs: ["ISTQB", "CSTS", "PMP"], updated: "2026-06-02" },
+  ];
+  ruleData = [["Lv.7", "인사위원회 심의"], ["Lv.6", "80점 이상"], ["Lv.5", "65점 이상"], ["Lv.4", "60점 이상"], ["Lv.3", "55점 이상"], ["Lv.2", "50점 이상"], ["Lv.1", "50점 미만"]];
+  distributionCounts = [1, 2, 2, 1, 1, 1, 0];
+  summaryContent = {
+    performance: [["업무성과평가", "82점", "직급 평균 78점"], ["조직평가", "88점", "본부 평균 81점"], ["목표 달성률", "94%", "전년 대비 +6%p"]],
+    work: [["근속년수", "3년 2개월", "경력점수 16점"], ["현 직무 수행", "1년 8개월", "QA 직무"], ["승진 허들", "2/3 충족", "필수 교육 보완"]],
+    total: [["역량 Level", "Lv.5", "2027 예측 Lv.6"], ["성과 수준", "상위 28%", "조직 평균 이상"], ["직무 적합도", "78%", "요건 2개 보완"]],
+  };
+  ratingLabels = ["전혀 아니다", "아니다", "보통", "그렇다", "매우 그렇다"];
+  multiQuestionLabels = [
+    "업무의 핵심을 정확히 파악하고 적절한 해결방안을 제시한다.",
+    "필요한 사항을 스스로 판단하고 주도적으로 실행한다.",
+    "새로운 기술과 방법을 활용해 업무 개선을 시도한다.",
+    "상대가 이해하기 쉽도록 의견을 논리적으로 전달한다.",
+    "갈등 상황에서도 상대를 존중하며 공동 목표에 기여한다.",
+    "문제 발생 시 책임을 회피하지 않고 끝까지 해결한다.",
+  ];
+  courseData = [
+    { id: "AWS DevOps", type: "교육", title: "AWS DevOps Professional", provider: "AWS Skill Builder", hours: 24, match: 96, points: 5, reason: "클라우드 운영 역량 Gap" },
+    { id: "요구공학", type: "필수", title: "실무자를 위한 요구공학", provider: "사내 Academy", hours: 12, match: 92, points: 3, reason: "QA 직무 필수 교육" },
+    { id: "ISTQB", type: "자격", title: "ISTQB Advanced Test Analyst", provider: "KSTQB", hours: 32, match: 88, points: 4, reason: "QA Level 6 추천 자격" },
+    { id: "AI Literacy", type: "교육", title: "AI Literacy for Business", provider: "Digital Campus", hours: 8, match: 84, points: 2, reason: "변화 추진 역량 보완" },
+  ];
+
+  state = {
+    view: "my", detailTab: "competency", scoreActive: "multi",
+    deptFilter: "전체", gradeFilter: "전체", jobFilter: "전체",
+    members: this.membersInit.map(m => ({ ...m })),
+    jobs: this.jobsInit.map(j => ({ ...j })),
+    jobSearch: "", jobGroup: "전체 직군",
+    levelSearch: "", levelDept: "전체",
+    multiAnswers: [4, 3, 4, 2, 5, 4], multiComment: "", multiSubmitted: false,
+    learningSet: ["AWS DevOps"], learningFilter: "전체",
+    weights: { multi: 40, tech: 35, industry: 25 },
+    appliedWeights: { multi: 40, tech: 35, industry: 25 },
+    resultSearch: "",
+    modal: null, jobDraft: null,
+    toast: "", toastVisible: false,
+  };
+
+  toast(message) {
+    if (this.toastTimer) clearTimeout(this.toastTimer);
+    this.setState({ toast: message, toastVisible: true });
+    this.toastTimer = setTimeout(() => this.setState({ toastVisible: false }), 2300);
+  }
+
+  downloadCsv(filename, header, rows) {
+    const csv = "\ufeff" + [header, ...rows].map(row => row.map(v => `"${String(v).replaceAll('"', '""')}"`).join(",")).join("\n");
+    const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+    const a = document.createElement("a");
+    a.href = url; a.download = filename; a.click();
+    URL.revokeObjectURL(url);
+    this.toast("조회 결과를 CSV로 저장했습니다.");
+  }
+
+  calculatedScore(member, weights) {
+    return member.multi * weights.multi / 100 + member.tech * weights.tech / 100 + member.industry * weights.industry / 100;
+  }
+
+  unique(key) {
+    return ["전체", ...new Set(this.state.members.map(m => m[key]))];
+  }
+
+  filteredMembers() {
+    const { deptFilter, gradeFilter, jobFilter, members } = this.state;
+    return members.filter(m => (deptFilter === "전체" || m.department === deptFilter) && (gradeFilter === "전체" || m.grade === gradeFilter) && (jobFilter === "전체" || m.job === jobFilter));
+  }
+
+  renderVals() {
+    const s = this.state;
+
+    // ---- nav / view toggles ----
+    const tabStyleActive = "border:0;background:#0a2f6b;color:#fff;border-radius:5px;padding:8px 20px;font-size:11.5px;font-weight:700;";
+    const tabStyleInactive = "border:0;background:transparent;color:#5c6572;border-radius:5px;padding:8px 20px;font-size:11.5px;font-weight:700;";
+    const viewBtnStyle = { my: s.view === "my" ? tabStyleActive : tabStyleInactive, org: s.view === "org" ? tabStyleActive : tabStyleInactive };
+
+    const tabStyleActive2 = "border:0;background:#0a2f6b;color:#fff;border-radius:5px;padding:7px 16px;font-size:11px;font-weight:700;min-width:88px;";
+    const tabStyleInactive2 = "border:0;background:transparent;color:#5c6572;border-radius:5px;padding:7px 16px;font-size:11px;font-weight:700;min-width:88px;";
+    const tabBtnStyle = {
+      competency: s.detailTab === "competency" ? tabStyleActive2 : tabStyleInactive2,
+      performance: s.detailTab === "performance" ? tabStyleActive2 : tabStyleInactive2,
+      skills: s.detailTab === "skills" ? tabStyleActive2 : tabStyleInactive2,
+      work: s.detailTab === "work" ? tabStyleActive2 : tabStyleInactive2,
+      total: s.detailTab === "total" ? tabStyleActive2 : tabStyleInactive2,
+    };
+
+    // ---- radar geometry ----
+    const center = 150, radius = 95, n = this.radarData.length;
+    const point = (i, value) => {
+      const angle = -Math.PI / 2 + (i * Math.PI * 2) / n;
+      const r = radius * (value / 100);
+      return [center + Math.cos(angle) * r, center + Math.sin(angle) * r];
+    };
+    const polyStr = (key, override) => this.radarData.map((d, i) => point(i, override ?? d[key]).join(",")).join(" ");
+    const radarRings = [20, 40, 60, 80, 100].map(v => ({ points: polyStr("me", v) }));
+    const radarAxes = this.radarData.map((_, i) => { const p = point(i, 100); return { x: p[0], y: p[1] }; });
+    const radarLabels = this.radarData.map((d, i) => { const p = point(i, 120); return { x: p[0], y: p[1], label: d.label }; });
+
+    // ---- score components ----
+    const scoreComponentsList = this.scoreComponents.map(item => ({
+      key: item.key, label: item.label, detail: item.detail, score: item.score, max: item.max,
+      onClick: () => this.setState({ scoreActive: item.key }),
+      btnStyle: `display:grid;grid-template-columns:150px 1fr 48px;align-items:center;gap:12px;width:100%;border:1px solid ${s.scoreActive === item.key ? "#d9dee6" : "transparent"};background:${s.scoreActive === item.key ? "#f1f3f6" : "transparent"};border-radius:5px;padding:8px;text-align:left;color:#1b2433;`,
+      meterStyle: `display:block;height:100%;width:${item.score / item.max * 100}%;background:${s.scoreActive === item.key ? "#0f7a5e" : "#14508c"};border-radius:4px;`,
+    }));
+
+    // ---- certificates / education ----
+    const education = this.educationData.map(e => ({
+      name: e.name,
+      iconStyle: `width:26px;height:26px;border-radius:5px;display:grid;place-items:center;background:${e.completed ? "#e8f5f0" : "#faf1e2"};color:${e.completed ? "#0f7a5e" : "#a97324"};font-weight:800;`,
+      iconText: e.completed ? "✓" : "·",
+      statusText: e.completed ? "이수 완료" : "직무 필수 · 미이수",
+      pointsText: e.completed ? `+${e.points}` : "필요",
+    }));
+
+    const isTabSummary = ["performance", "work", "total"].includes(s.detailTab);
+    const summaryCards = isTabSummary ? this.summaryContent[s.detailTab].map(c => ({ label: c[0], value: c[1], note: c[2] })) : [];
+
+    // ---- org view ----
+    const filtered = this.filteredMembers();
+    const deptOptions = ["전체", ...this.departments];
+    const gradeOptions = this.unique("grade");
+    const jobOptions = this.unique("job");
+    const avg = filtered.length ? Math.round(filtered.reduce((sum, m) => sum + m.score, 0) / filtered.length) : 0;
+    const orgKpis = [
+      { label: "조회 인원", value: `${filtered.length}명`, note: `평가 대상 ${s.members.length}명`, cardStyle: "background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:15px 17px;", valueStyle: "display:block;font-size:20px;color:#0a2f6b;margin:4px 0;" },
+      { label: "평균 역량점수", value: `${avg}점`, note: "전사 평균 69점", cardStyle: "background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:15px 17px;", valueStyle: "display:block;font-size:20px;color:#0a2f6b;margin:4px 0;" },
+      { label: "Lv.5 이상", value: `${filtered.filter(m => m.level >= 5).length}명`, note: "핵심·전문 인력", cardStyle: "background:#fff;border:1px solid #d9dee6;border-radius:6px;padding:15px 17px;", valueStyle: "display:block;font-size:20px;color:#0a2f6b;margin:4px 0;" },
+      { label: "관리 필요", value: `${filtered.filter(m => m.watch).length}명`, note: "미응시·하락 포함", cardStyle: "background:#fff;border-top:3px solid #b23b2e;border-left:1px solid #d9dee6;border-right:1px solid #d9dee6;border-bottom:1px solid #d9dee6;border-radius:6px;padding:15px 17px;", valueStyle: "display:block;font-size:20px;color:#b23b2e;margin:4px 0;" },
+    ];
+    const memberBars = filtered.map(m => ({
+      name: m.name, score: m.score,
+      barStyle: `position:absolute;inset:0 auto 0 0;border-radius:3px;width:${m.score}%;background:${m.score < m.previous ? "#a9583e" : "#14508c"};`,
+      prevMarkStyle: `position:absolute;top:-3px;width:2px;height:18px;background:#1b2433;left:${Math.min(98, m.previous)}%;`,
+    }));
+    const watches = s.members.filter(m => m.watch);
+    const watchList = watches.map(m => ({
+      initial: m.name.slice(-1), name: m.name, job: m.job, grade: m.grade,
+      statusText: m.status === "미응시" ? "평가 미응시" : `직전 대비 ${m.score - m.previous}점`,
+      onUnwatch: () => this.toggleWatch(m.id),
+    }));
+    const memberRows = filtered.map(m => {
+      const up = m.score >= m.previous;
+      const risk = m.status === "관찰" || m.status === "미응시";
+      return {
+        name: m.name, department: m.department, job: m.job, grade: m.grade, level: m.level, score: m.score,
+        starChar: m.watch ? "★" : "☆",
+        starStyle: `border:0;background:transparent;font-size:14px;color:${m.watch ? "#c98a1f" : "#b5becb"};`,
+        trendText: `${up ? "▲" : "▼"}${Math.abs(m.score - m.previous)}`,
+        trendStyle: `font-size:8px;color:${up ? "#0f7a5e" : "#b23b2e"};`,
+        multi: m.multi, cert: m.cert, status: m.status,
+        statusStyle: `font-size:8.5px;border-radius:4px;padding:3px 7px;background:${risk ? "#fbeae7" : "#e8f5f0"};color:${risk ? "#b23b2e" : "#0f7a5e"};`,
+        onWatch: () => this.toggleWatch(m.id),
+      };
+    });
+
+    // ---- levels page ----
+    const levelQuery = s.levelSearch.toLowerCase();
+    const levelFiltered = s.members.filter(m => (!levelQuery || `${m.name} ${m.job}`.toLowerCase().includes(levelQuery)) && (s.levelDept === "전체" || m.department === s.levelDept));
+    const levelRows = levelFiltered.map(m => ({
+      initial: m.name.slice(-1), name: m.name, department: m.department, job: m.job, grade: m.grade, level: m.level, score: m.score,
+      trendText: `${m.score >= m.previous ? "▲" : "▼"} ${Math.abs(m.score - m.previous)}`,
+      trendStyle: `font-size:8px;color:${m.score >= m.previous ? "#0f7a5e" : "#b23b2e"};`,
+      predicted: m.score >= 78 ? Math.min(7, m.level + 1) : m.level,
+      onDetail: () => this.showMemberDetail(m.id),
+    }));
+    const distribution = this.distributionCounts.map((count, i) => ({ label: `Lv.${i + 1}`, count, barStyle: `display:block;width:min(32px,70%);border-radius:5px 5px 2px 2px;background:#14508c;height:${Math.max(8, count * 36)}px;` }));
+    const ruleList = this.ruleData.map(r => ({ level: r[0], rule: r[1] }));
+
+    // ---- jobs page ----
+    const jobQuery = s.jobSearch.toLowerCase();
+    const jobsFiltered = s.jobs.filter(j => (!jobQuery || `${j.id} ${j.name} ${j.skills.join(" ")}`.toLowerCase().includes(jobQuery)) && (s.jobGroup === "전체 직군" || j.group === s.jobGroup));
+    const jobCards = jobsFiltered.map(j => ({
+      id: j.id, group: j.group, name: j.name, purpose: j.purpose, people: j.people, level: j.level, updated: j.updated, skills: j.skills, certCount: j.certs.length,
+      onEdit: () => this.openJobForm(j), onView: () => this.openJobForm(j),
+    }));
+
+    // ---- multi page ----
+    const completed = s.multiAnswers.filter(v => v > 0).length;
+    const multiQuestions = this.multiQuestionLabels.map((label, i) => ({
+      num: String(i + 1).padStart(2, "0"), label,
+      options: [1, 2, 3, 4, 5].map(v => ({
+        value: v, label: this.ratingLabels[v - 1],
+        onClick: () => this.rate(i, v),
+        btnStyle: `border:1px solid ${s.multiAnswers[i] === v ? "#14508c" : "#d9dee6"};background:${s.multiAnswers[i] === v ? "#eef2f8" : "#fff"};color:${s.multiAnswers[i] === v ? "#14508c" : "#5c6572"};border-radius:5px;padding:6px 3px;font-size:11px;font-weight:800;`,
+      })),
+    }));
+
+    // ---- tech: nothing dynamic besides upload handler ----
+
+    // ---- results page ----
+    const resultQuery = s.resultSearch.toLowerCase();
+    const resultFiltered = s.members.filter(m => `${m.name} ${m.job}`.toLowerCase().includes(resultQuery));
+    const resultRows = resultFiltered.map(m => {
+      const final = this.calculatedScore(m, s.appliedWeights).toFixed(1);
+      const status = m.status === "관찰" || m.status === "미응시" ? "검토 필요" : "확정";
+      return {
+        initial: m.name.slice(-1), name: m.name, job: m.job, multi: m.multi, tech: m.tech, industry: m.industry, final, level: m.level, status,
+        statusStyle: `font-size:8.5px;border-radius:4px;padding:3px 7px;background:${status === "검토 필요" ? "#fbeae7" : "#e8f5f0"};color:${status === "검토 필요" ? "#b23b2e" : "#0f7a5e"};`,
+        onDetail: () => this.showMemberDetail(m.id),
+      };
+    });
+    const weightTotalNow = s.weights.multi + s.weights.tech + s.weights.industry;
+    const resultAvg = s.members.reduce((sum, m) => sum + this.calculatedScore(m, s.appliedWeights), 0) / s.members.length;
+
+    // ---- learning page ----
+    const courses = this.courseData.map(c => ({ ...c, enrolled: s.learningSet.includes(c.id) }));
+    const coursesShown = s.learningFilter === "전체" ? courses : courses.filter(c => c.type === s.learningFilter);
+    const courseCards = coursesShown.map(c => ({
+      id: c.id, match: c.match, title: c.title, meta: `${c.provider} · ${c.hours}시간 · ${c.points}점`, reason: c.reason,
+      type: c.type, typeStyle: `padding:3px 7px;border-radius:4px;background:${c.type === "필수" ? "#fbeae7" : "#eef2f8"};color:${c.type === "필수" ? "#b23b2e" : "#14508c"};font-size:8px;font-weight:700;`,
+      artLabel: c.type === "자격" ? "CERT" : "LEARN",
+      enrollLabel: c.enrolled ? "✓ 계획에 추가됨" : "성장 계획에 추가",
+      enrollStyle: c.enrolled ? "height:32px;border:0;background:#e8f5f0;color:#0f7a5e;border-radius:4px;padding:0 9px;font-size:9.5px;font-weight:700;" : "height:32px;border:0;background:#0a2f6b;color:#fff;border-radius:4px;padding:0 9px;font-size:9.5px;font-weight:700;",
+      onEnroll: () => this.courseEnroll(c.id), onDetail: () => this.openModal("courseDetail", { id: c.id }),
+    }));
+    const learningFilters = ["전체", "교육", "자격", "필수"].map(f => ({
+      label: f === "필수" ? "필수 과정" : f,
+      onClick: () => this.setState({ learningFilter: f }),
+      btnStyle: f === s.learningFilter ? "border:0;background:#0a2f6b;color:#fff;border-radius:4px;padding:6px 12px;font-size:9.5px;font-weight:700;" : "border:1px solid #d9dee6;background:#fff;color:#5c6572;border-radius:4px;padding:6px 12px;font-size:9.5px;font-weight:700;",
+    }));
+
+    // ---- modal content ----
+    const modal = s.modal;
+    let modalTitle = "", modalEyebrow = "", modalMember = null, modalCourseId = "";
+    if (modal && modal.type === "member") {
+      const m = s.members.find(x => x.id === modal.id);
+      modalTitle = `${m.name} 역량 상세`; modalEyebrow = "EMPLOYEE INSIGHT";
+      modalMember = { initial: m.name.slice(-1), name: m.name, sub: `${m.department} · ${m.job} · ${m.grade}`, level: m.level, score: m.score, multi: m.multi, tech: m.tech, industry: m.industry, historyText: `${m.previous} → ${m.score}점` };
+    } else if (modal && modal.type === "jobForm") {
+      modalTitle = modal.isEdit ? "직무 정의서 편집" : "새 직무 등록"; modalEyebrow = "JOB PROFILE";
+    } else if (modal && modal.type === "rule") { modalTitle = "역량 Level 산정 기준"; modalEyebrow = "LEVEL RULE"; }
+    else if (modal && modal.type === "techConfig") { modalTitle = "성과 평가 운영 설정"; modalEyebrow = "ASSESSMENT SETUP"; }
+    else if (modal && modal.type === "questionAdd") { modalTitle = "조정 대상 상세"; modalEyebrow = "CALIBRATION REVIEW"; }
+    else if (modal && modal.type === "finalize") { modalTitle = "평가 결과 확정"; modalEyebrow = "FINAL CONFIRMATION"; }
+    else if (modal && modal.type === "courseDetail") { modalTitle = modal.id; modalEyebrow = "LEARNING DETAIL"; modalCourseId = modal.id; }
+
+    return {
+      state: s,
+      isViewMy: s.view === "my", isViewOrg: s.view === "org",
+      isTabCompetency: s.detailTab === "competency", isTabSkills: s.detailTab === "skills", isTabSummary,
+      viewBtnStyle, tabBtnStyle,
+      radarRings, radarAxes, radarLabels,
+      radarMePoints: polyStr("me"), radarTeamPoints: polyStr("team"),
+      scoreComponentsList, certificates: this.certificates, education, summaryCards,
+      deptOptions, gradeOptions, jobOptions,
+      orgKpis, memberBars, watchList, hasWatch: watches.length > 0, hasNoWatch: watches.length === 0, watchCountText: `${watches.length}명`,
+      memberRows, memberRowsEmpty: memberRows.length === 0,
+      levelRows, distribution, ruleList,
+      jobCards, jobCountText: `${jobsFiltered.length}`,
+      multiQuestions, multiProgressCount: `${completed}/${s.multiAnswers.length}`, multiProgressText: `${Math.round(completed / s.multiAnswers.length * 100)}%`,
+      multiSubmitLabel: s.multiSubmitted ? "제출 완료 ✓" : "평가 제출",
+      multiSubmitBtnStyle: s.multiSubmitted ? "height:34px;border:0;background:#c7cfda;color:#5c6572;border-radius:4px;padding:0 15px;font-size:10px;font-weight:700;" : "height:34px;border:0;background:#0a2f6b;color:#fff;border-radius:4px;padding:0 15px;font-size:10px;font-weight:700;",
+      weightLabels: { multi: `${s.weights.multi}%`, tech: `${s.weights.tech}%`, industry: `${s.weights.industry}%` },
+      weightTotalText: `합계 ${weightTotalNow}%`,
+      weightTotalStyle: `font-size:9px;font-weight:700;border-radius:4px;padding:4px 8px;background:${weightTotalNow !== 100 ? "#fbeae7" : "#eef2f8"};color:${weightTotalNow !== 100 ? "#b23b2e" : "#14508c"};white-space:nowrap;height:fit-content;`,
+      resultRows, resultAverageText: resultAvg.toFixed(1), resultDeltaText: "+1.0", levelUpsText: "2명", maxChangeText: "+2.6",
+      courseCards, learningFilters,
+      modalOpen: !!modal, modalTitle, modalEyebrow,
+      modalIsMember: modal && modal.type === "member", modalMember,
+      modalIsJobForm: modal && modal.type === "jobForm", jobDraft: s.jobDraft || { id: "", group: "개발", name: "", purpose: "", people: 0, level: 7, skillsText: "" }, jobDraftIsEdit: !!(modal && modal.type === "jobForm" && modal.isEdit),
+      modalIsRule: modal && modal.type === "rule",
+      modalIsTechConfig: modal && modal.type === "techConfig",
+      modalIsQuestionAdd: modal && modal.type === "questionAdd",
+      modalIsFinalize: modal && modal.type === "finalize",
+      modalIsCourseDetail: modal && modal.type === "courseDetail", modalCourseId,
+      toastVisible: s.toastVisible,
+      handlers: {
+        viewMy: () => this.setState({ view: "my" }), viewOrg: () => this.setState({ view: "org" }),
+        tabCompetency: () => this.setState({ detailTab: "competency" }), tabPerformance: () => this.setState({ detailTab: "performance" }),
+        tabSkills: () => this.setState({ detailTab: "skills" }), tabWork: () => this.setState({ detailTab: "work" }), tabTotal: () => this.setState({ detailTab: "total" }),
+        setDept: e => { this.setState({ deptFilter: e.target.value }); }, setGrade: e => { this.setState({ gradeFilter: e.target.value }); }, setJob: e => { this.setState({ jobFilter: e.target.value }); },
+        resetFilters: () => this.setState({ deptFilter: "전체", gradeFilter: "전체", jobFilter: "전체" }),
+        downloadOrgCsv: () => this.downloadCsv("역량_조직분석_202606.csv", ["성명", "조직", "직무", "직급", "역량Level", "점수", "다면진단", "자격증", "상태"], this.filteredMembers().map(m => [m.name, m.department, m.job, m.grade, `Lv.${m.level}`, m.score, m.multi, m.cert, m.status])),
+        levelExport: () => this.downloadCsv("역량_Level_조회.csv", ["직원", "조직", "직무", "Level", "점수"], s.members.map(m => [m.name, m.department, m.job, m.level, m.score])),
+        batchRun: () => this.toast("샘플 배치를 완료했습니다. 3명의 예측 점수가 갱신되었습니다."),
+        openRuleModal: () => this.openModal("rule"),
+        ruleSave: () => { this.closeModal(); this.toast("산정 기준을 저장했습니다."); },
+        setLevelSearch: e => this.setState({ levelSearch: e.target.value }), setLevelDept: e => this.setState({ levelDept: e.target.value }),
+        openJobAdd: () => this.openJobForm(null),
+        jobExport: () => this.downloadCsv("직무_정의서_목록.csv", ["코드", "직군", "직무명", "인원", "Level"], s.jobs.map(j => [j.id, j.group, j.name, j.people, j.level])),
+        setJobSearch: e => this.setState({ jobSearch: e.target.value }), setJobGroup: e => this.setState({ jobGroup: e.target.value }),
+        jobDraftId: e => this.updateJobDraft("id", e.target.value), jobDraftGroup: e => this.updateJobDraft("group", e.target.value),
+        jobDraftName: e => this.updateJobDraft("name", e.target.value), jobDraftPurpose: e => this.updateJobDraft("purpose", e.target.value),
+        jobDraftPeople: e => this.updateJobDraft("people", e.target.value), jobDraftLevel: e => this.updateJobDraft("level", e.target.value),
+        jobDraftSkills: e => this.updateJobDraft("skillsText", e.target.value),
+        jobSave: () => this.saveJobForm(), jobDelete: () => this.deleteJob(),
+        setMultiComment: e => this.setState({ multiComment: e.target.value }),
+        multiSave: () => this.toast("작성 중인 평가를 임시 저장했습니다."),
+        multiSubmit: () => { if (s.multiAnswers.some(v => !v)) this.toast("모든 문항에 응답해주세요."); else { this.setState({ multiSubmitted: true }); this.toast("다면역량진단을 제출했습니다."); } },
+        techTemplate: () => this.downloadCsv("MBO 성과_업로드_양식.csv", ["사번", "성명", "직무", "점수"], [["SAMPLE-001", "직원 A", "QA", ""]]),
+        techUpload: e => { if (e.target.files[0]) this.toast(`${e.target.files[0].name} 파일을 검증 후 반영했습니다.`); },
+        openTechConfig: () => this.openModal("techConfig"), techConfigSave: () => { this.closeModal(); this.toast("설정을 저장했습니다."); },
+        openQuestionAdd: () => this.toast("조정 검토 대상 42명의 상세 목록을 표시했습니다."), questionAddSave: () => { this.closeModal(); this.toast("검토 의견을 저장했습니다."); },
+        remind: () => this.toast("평가 미제출자 124명에게 알림을 발송했습니다."),
+        setWeightMulti: e => this.setState({ weights: { ...s.weights, multi: Number(e.target.value) } }),
+        setWeightTech: e => this.setState({ weights: { ...s.weights, tech: Number(e.target.value) } }),
+        setWeightIndustry: e => this.setState({ weights: { ...s.weights, industry: Number(e.target.value) } }),
+        recalculate: () => { if (weightTotalNow !== 100) this.toast("가중치 합계를 100%로 맞춰주세요."); else { this.setState({ appliedWeights: { ...s.weights } }); this.toast("변경된 가중치로 결과를 재산정했습니다."); } },
+        setResultSearch: e => this.setState({ resultSearch: e.target.value }),
+        resultExport: () => this.downloadCsv("평가_최종결과.csv", ["직원", "직무", "다면", "기술", "산업", "최종"], s.members.map(m => [m.name, m.job, m.multi, m.tech, m.industry, this.calculatedScore(m, s.appliedWeights).toFixed(1)])),
+        openFinalize: () => this.openModal("finalize"), confirmFinalize: () => { this.closeModal(); this.toast("2026년 상반기 평가 결과를 확정했습니다."); },
+        planView: () => this.toast(`성장 계획에 ${s.learningSet.length}개 항목이 등록되어 있습니다.`),
+        closeModal: () => this.closeModal(),
+      },
+    };
+  }
+
+  toggleWatch(id) {
+    this.setState({ members: this.state.members.map(m => m.id === id ? { ...m, watch: !m.watch } : m) });
+    const m = this.state.members.find(x => x.id === id);
+    this.toast(`${m.name}을 관심 직원에서 ${m.watch ? "등록" : "해제"}했습니다.`);
+  }
+
+  rate(index, value) {
+    const answers = [...this.state.multiAnswers];
+    answers[index] = value;
+    this.setState({ multiAnswers: answers });
+  }
+
+  showMemberDetail(id) { this.openModal("member", { id }); }
+
+  openModal(type, extra) { this.setState({ modal: { type, ...(extra || {}) } }); }
+  closeModal() { this.setState({ modal: null, jobDraft: null }); }
+
+  openJobForm(job) {
+    this.setState({
+      modal: { type: "jobForm", isEdit: !!job, originalId: job ? job.id : null },
+      jobDraft: job ? { id: job.id, group: job.group, name: job.name, purpose: job.purpose, people: job.people, level: job.level, skillsText: job.skills.join(", ") } : { id: `R${String(this.state.jobs.length + 1).padStart(4, "0")}`, group: "개발", name: "", purpose: "", people: 0, level: 7, skillsText: "" },
+    });
+  }
+
+  updateJobDraft(key, value) {
+    this.setState({ jobDraft: { ...this.state.jobDraft, [key]: value } });
+  }
+
+  saveJobForm() {
+    const d = this.state.jobDraft;
+    const item = { id: d.id, group: d.group, name: d.name, purpose: d.purpose, people: Number(d.people), level: Number(d.level), skills: d.skillsText.split(",").map(v => v.trim()).filter(Boolean), certs: [], updated: new Date().toISOString().slice(0, 10) };
+    const modal = this.state.modal;
+    const jobs = modal.isEdit ? this.state.jobs.map(j => j.id === modal.originalId ? item : j) : [...this.state.jobs, item];
+    this.setState({ jobs, modal: null, jobDraft: null });
+    this.toast(modal.isEdit ? "직무 정의서를 수정했습니다." : "새 직무를 등록했습니다.");
+  }
+
+  deleteJob() {
+    const modal = this.state.modal;
+    this.setState({ jobs: this.state.jobs.filter(j => j.id !== modal.originalId), modal: null, jobDraft: null });
+    this.toast("직무 정의서를 삭제했습니다.");
+  }
+
+  courseEnroll(id) {
+    const has = this.state.learningSet.includes(id);
+    const learningSet = has ? this.state.learningSet.filter(x => x !== id) : [...this.state.learningSet, id];
+    this.setState({ learningSet });
+    this.toast(has ? "성장 계획에서 제외했습니다." : "성장 계획에 추가했습니다.");
+  }
+}
+
+</script>
+</body>
+</html>
